@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>編輯 - {{ item.title['zh-tw'] }}</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=2">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo"><img src="/static/logo.svg" alt="MacroMicro" class="logo-img"></a>
+            <div class="nav-right">
+                <a href="/admin" class="admin-link active">Admin</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="admin-edit">
+            <div class="edit-header">
+                <a href="/admin" class="back-link">← 返回列表</a>
+                <h1>編輯 FAQ</h1>
+            </div>
+
+            <form id="edit-form">
+                <!-- Meta -->
+                <div class="edit-section">
+                    <h2>基本資訊</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" value="{{ item.id }}" disabled class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>狀態</label>
+                            <select id="status" class="form-input">
+                                <option value="published" {{ 'selected' if item.status == 'published' }}>已上架</option>
+                                <option value="draft" {{ 'selected' if item.status == 'draft' }}>草稿</option>
+                                <option value="archived" {{ 'selected' if item.status == 'archived' }}>已下架</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>類別</label>
+                            <input type="text" id="category" value="{{ item.category }}" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>段落</label>
+                            <input type="text" id="section" value="{{ item.section }}" class="form-input">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group locale-toggle">
+                            <label>顯示語系</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" id="locale-zhtw" checked disabled> 繁中</label>
+                                <label><input type="checkbox" id="locale-zhcn" {{ 'checked' if item.locales['zh-cn'] }}> 簡中</label>
+                                <label><input type="checkbox" id="locale-en" {{ 'checked' if item.locales['en'] }}> English</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Titles -->
+                <div class="edit-section">
+                    <h2>標題</h2>
+                    <div class="form-group">
+                        <label>繁體中文</label>
+                        <input type="text" id="title-zhtw" value="{{ item.title['zh-tw'] }}" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>簡體中文</label>
+                        <input type="text" id="title-zhcn" value="{{ item.title.get('zh-cn', '') }}" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>English</label>
+                        <input type="text" id="title-en" value="{{ item.title.get('en', '') }}" class="form-input">
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="edit-section">
+                    <h2>內容 (Markdown)</h2>
+                    <div class="editor-toolbar">
+                        <button type="button" class="toolbar-btn" onclick="insertLink()" title="插入連結">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                            插入連結
+                        </button>
+                        <button type="button" class="toolbar-btn" onclick="document.getElementById('image-upload').click()" title="上傳圖片">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            上傳圖片
+                        </button>
+                        <button type="button" class="toolbar-btn" onclick="insertBold()" title="粗體">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"/><path d="M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"/></svg>
+                            粗體
+                        </button>
+                        <button type="button" class="toolbar-btn" onclick="insertHeading()" title="標題">
+                            <span style="font-weight:700; font-size:14px;">H</span>
+                            標題
+                        </button>
+                        <button type="button" class="toolbar-btn" onclick="insertList()" title="清單">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                            清單
+                        </button>
+                        <button type="button" class="toolbar-btn" onclick="openTableEditor()" title="表格">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+                            表格
+                        </button>
+                        <input type="file" id="image-upload" accept="image/*" style="display:none" onchange="uploadImage(this)">
+                    </div>
+                    <div class="tab-bar">
+                        <button type="button" class="tab active" data-tab="zhtw">繁體中文</button>
+                        <button type="button" class="tab" data-tab="zhcn">簡體中文</button>
+                        <button type="button" class="tab" data-tab="en">English</button>
+                    </div>
+                    <div class="tab-content active" id="tab-zhtw">
+                        <textarea id="content-zhtw" class="form-textarea" rows="18">{{ content_zhtw }}</textarea>
+                    </div>
+                    <div class="tab-content" id="tab-zhcn">
+                        <textarea id="content-zhcn" class="form-textarea" rows="18">{{ content_zhcn }}</textarea>
+                    </div>
+                    <div class="tab-content" id="tab-en">
+                        <textarea id="content-en" class="form-textarea" rows="18">{{ content_en }}</textarea>
+                    </div>
+                </div>
+
+                <div class="edit-actions">
+                    <button type="button" id="save-btn" class="btn-primary" onclick="saveFaq()">儲存</button>
+                    <a href="/faq/{{ item.id }}" target="_blank" class="btn-secondary">預覽</a>
+                    <span id="save-status"></span>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+    const faqId = "{{ item.id }}";
+
+    // Get the currently active textarea
+    function getActiveTextarea() {
+        const activeTab = document.querySelector('.tab-content.active');
+        return activeTab ? activeTab.querySelector('textarea') : null;
+    }
+
+    // Insert text at cursor position
+    function insertAtCursor(textarea, text) {
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const before = textarea.value.substring(0, start);
+        const after = textarea.value.substring(end);
+        textarea.value = before + text + after;
+        textarea.selectionStart = textarea.selectionEnd = start + text.length;
+        textarea.focus();
+    }
+
+    // Wrap selected text
+    function wrapSelection(textarea, before, after) {
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const selected = textarea.value.substring(start, end);
+        const beforeText = textarea.value.substring(0, start);
+        const afterText = textarea.value.substring(end);
+        const wrapped = before + (selected || '文字') + after;
+        textarea.value = beforeText + wrapped + afterText;
+        // Select the inner text
+        textarea.selectionStart = start + before.length;
+        textarea.selectionEnd = start + before.length + (selected || '文字').length;
+        textarea.focus();
+    }
+
+    // Insert link
+    function insertLink() {
+        const ta = getActiveTextarea();
+        if (!ta) return;
+        const url = prompt('輸入網址 URL：');
+        if (!url) return;
+        const selected = ta.value.substring(ta.selectionStart, ta.selectionEnd);
+        const text = selected || prompt('輸入顯示文字：', '') || url;
+        insertAtCursor(ta, `[${text}](${url})`);
+    }
+
+    // Insert bold
+    function insertBold() {
+        const ta = getActiveTextarea();
+        if (!ta) return;
+        wrapSelection(ta, '**', '**');
+    }
+
+    // Insert heading
+    function insertHeading() {
+        const ta = getActiveTextarea();
+        if (!ta) return;
+        const start = ta.selectionStart;
+        // Find beginning of current line
+        const lineStart = ta.value.lastIndexOf('\n', start - 1) + 1;
+        const before = ta.value.substring(0, lineStart);
+        const after = ta.value.substring(lineStart);
+        ta.value = before + '### ' + after;
+        ta.selectionStart = ta.selectionEnd = start + 4;
+        ta.focus();
+    }
+
+    // Insert list
+    function insertList() {
+        const ta = getActiveTextarea();
+        if (!ta) return;
+        insertAtCursor(ta, '\n- 項目一\n- 項目二\n- 項目三\n');
+    }
+
+    // Upload image
+    async function uploadImage(input) {
+        const file = input.files[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        try {
+            const res = await fetch('/api/upload', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await res.json();
+            if (data.ok) {
+                const ta = getActiveTextarea();
+                if (ta) insertAtCursor(ta, '\n' + data.markdown + '\n');
+            } else {
+                alert('上傳失敗：' + (data.error || '未知錯誤'));
+            }
+        } catch (e) {
+            alert('上傳失敗');
+        }
+        input.value = ''; // Reset so same file can be uploaded again
+    }
+
+    // Tab switching
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+        });
+    });
+
+    async function saveFaq() {
+        const btn = document.getElementById('save-btn');
+        const status = document.getElementById('save-status');
+        btn.disabled = true;
+        btn.textContent = '儲存中...';
+
+        const body = {
+            title: {
+                'zh-tw': document.getElementById('title-zhtw').value,
+                'zh-cn': document.getElementById('title-zhcn').value,
+                'en': document.getElementById('title-en').value,
+            },
+            status: document.getElementById('status').value,
+            category: document.getElementById('category').value,
+            section: document.getElementById('section').value,
+            locales: {
+                'zh-tw': true,
+                'zh-cn': document.getElementById('locale-zhcn').checked,
+                'en': document.getElementById('locale-en').checked,
+            },
+            content_zhtw: document.getElementById('content-zhtw').value,
+            content_zhcn: document.getElementById('content-zhcn').value,
+            content_en: document.getElementById('content-en').value,
+        };
+
+        try {
+            const res = await fetch(`/api/faq/${faqId}/save`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(body)
+            });
+            if (res.ok) {
+                status.textContent = '已儲存';
+                status.style.color = '#9ece67';
+            } else {
+                status.textContent = '儲存失敗';
+                status.style.color = '#f96868';
+            }
+        } catch (e) {
+            status.textContent = '儲存失敗';
+            status.style.color = '#f96868';
+        }
+
+        btn.disabled = false;
+        btn.textContent = '儲存';
+        setTimeout(() => { status.textContent = ''; }, 3000);
+    }
+    // ========== Table Editor ==========
+    let tableRows = 3;
+    let tableCols = 3;
+
+    function openTableEditor() {
+        // Check if modal already exists
+        let modal = document.getElementById('table-modal');
+        if (modal) modal.remove();
+
+        modal = document.createElement('div');
+        modal.id = 'table-modal';
+        modal.className = 'modal-overlay';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>編輯表格</h3>
+                    <button onclick="closeTableEditor()" class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-size-controls">
+                        <label>欄數 <input type="number" id="table-cols" value="3" min="1" max="10" onchange="rebuildTable()"></label>
+                        <label>列數 <input type="number" id="table-rows" value="3" min="1" max="20" onchange="rebuildTable()"></label>
+                        <button class="btn-small" onclick="addRow()">+ 列</button>
+                        <button class="btn-small" onclick="addCol()">+ 欄</button>
+                    </div>
+                    <div class="table-editor-area" id="table-editor-area">
+                    </div>
+                    <div class="table-hint">第一列為表頭（會自動加粗）</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" onclick="insertTable()">插入表格</button>
+                    <button class="btn-secondary" onclick="closeTableEditor()">取消</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        rebuildTable();
+    }
+
+    function closeTableEditor() {
+        const modal = document.getElementById('table-modal');
+        if (modal) modal.remove();
+    }
+
+    function rebuildTable() {
+        const cols = parseInt(document.getElementById('table-cols').value) || 3;
+        const rows = parseInt(document.getElementById('table-rows').value) || 3;
+        tableCols = cols;
+        tableRows = rows;
+
+        const area = document.getElementById('table-editor-area');
+
+        // Preserve existing values if possible
+        const oldInputs = area.querySelectorAll('input');
+        const oldValues = [];
+        oldInputs.forEach(inp => oldValues.push(inp.value));
+
+        let html = '<table class="table-edit-grid"><tbody>';
+        let idx = 0;
+        for (let r = 0; r < rows; r++) {
+            html += '<tr>';
+            if (r === 0) {
+                // Add delete column buttons
+                html += '<td class="cell-action"></td>';
+                for (let c = 0; c < cols; c++) {
+                    html += `<td class="cell-action"><button class="btn-tiny" onclick="removeCol(${c})" title="刪除此欄">&times;</button></td>`;
+                }
+                html += '</tr><tr>';
+            }
+            html += `<td class="cell-action"><button class="btn-tiny" onclick="removeRow(${r})" title="刪除此列">&times;</button></td>`;
+            for (let c = 0; c < cols; c++) {
+                const val = oldValues[idx] || '';
+                const placeholder = r === 0 ? '表頭' : '';
+                html += `<td><input type="text" class="table-cell-input" data-r="${r}" data-c="${c}" value="${val.replace(/"/g, '&quot;')}" placeholder="${placeholder}"></td>`;
+                idx++;
+            }
+            html += '</tr>';
+        }
+        html += '</tbody></table>';
+        area.innerHTML = html;
+    }
+
+    function addRow() {
+        const input = document.getElementById('table-rows');
+        input.value = parseInt(input.value) + 1;
+        rebuildTable();
+    }
+
+    function addCol() {
+        const input = document.getElementById('table-cols');
+        input.value = parseInt(input.value) + 1;
+        rebuildTable();
+    }
+
+    function removeRow(r) {
+        if (tableRows <= 1) return;
+        // Collect values, remove row, rebuild
+        const values = collectTableValues();
+        values.splice(r, 1);
+        const input = document.getElementById('table-rows');
+        input.value = parseInt(input.value) - 1;
+        rebuildTable();
+        // Restore values
+        restoreTableValues(values);
+    }
+
+    function removeCol(c) {
+        if (tableCols <= 1) return;
+        const values = collectTableValues();
+        values.forEach(row => row.splice(c, 1));
+        const input = document.getElementById('table-cols');
+        input.value = parseInt(input.value) - 1;
+        rebuildTable();
+        restoreTableValues(values);
+    }
+
+    function collectTableValues() {
+        const inputs = document.querySelectorAll('.table-cell-input');
+        const values = [];
+        let currentRow = [];
+        let lastR = 0;
+        inputs.forEach(inp => {
+            const r = parseInt(inp.dataset.r);
+            if (r !== lastR) {
+                values.push(currentRow);
+                currentRow = [];
+                lastR = r;
+            }
+            currentRow.push(inp.value);
+        });
+        values.push(currentRow);
+        return values;
+    }
+
+    function restoreTableValues(values) {
+        const inputs = document.querySelectorAll('.table-cell-input');
+        let idx = 0;
+        for (let r = 0; r < values.length; r++) {
+            for (let c = 0; c < values[r].length; c++) {
+                if (inputs[idx]) {
+                    inputs[idx].value = values[r][c];
+                }
+                idx++;
+            }
+        }
+    }
+
+    function insertTable() {
+        const values = collectTableValues();
+        if (values.length === 0) return;
+
+        const cols = values[0].length;
+        let md = '\n';
+
+        // Header row
+        md += '| ' + values[0].map(v => v || ' ').join(' | ') + ' |\n';
+        // Separator
+        md += '| ' + Array(cols).fill('---').join(' | ') + ' |\n';
+        // Data rows
+        for (let r = 1; r < values.length; r++) {
+            md += '| ' + values[r].map(v => v || ' ').join(' | ') + ' |\n';
+        }
+        md += '\n';
+
+        const ta = getActiveTextarea();
+        if (ta) insertAtCursor(ta, md);
+        closeTableEditor();
+    }
+    </script>
+</body>
+</html>

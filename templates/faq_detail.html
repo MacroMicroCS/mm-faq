@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} - MacroMicro FAQ{% endblock %}
+{% block content %}
+<div class="faq-detail">
+    <div class="breadcrumb">
+        <a href="/?locale={{ locale }}">{% if locale == 'en' %}Home{% elif locale == 'zh-cn' %}首页{% else %}首頁{% endif %}</a>
+        <span>›</span>
+        <a href="/category/{{ item.category }}?locale={{ locale }}">{{ item.category }}</a>
+        <span>›</span>
+        <span>{{ item.section }}</span>
+    </div>
+    <article>
+        <h1>{{ title }}</h1>
+        <div class="faq-content">{{ content_html | safe }}</div>
+    </article>
+
+    {% if related %}
+    <div class="related-reading">
+        <h2>{% if locale == 'en' %}Related Articles{% elif locale == 'zh-cn' %}延伸阅读{% else %}延伸閱讀{% endif %}</h2>
+        <ul>
+            {% for r in related %}
+            <li>
+                <a href="/faq/{{ r.id }}?locale={{ locale }}">{{ r.title[locale] or r.title['zh-tw'] }}</a>
+                <span class="related-meta">{{ r.section }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

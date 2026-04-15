@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ category_name }} - MacroMicro FAQ{% endblock %}
+{% block content %}
+<div class="category-page">
+    <div class="breadcrumb">
+        <a href="/?locale={{ locale }}">{% if locale == 'en' %}Home{% elif locale == 'zh-cn' %}首页{% else %}首頁{% endif %}</a>
+        <span>›</span>
+        <span>{{ category_name }}</span>
+    </div>
+    <h1>{{ category_name }}</h1>
+    {% for sec_name, items in sections.items() %}
+    <div class="section-block">
+        <h2>{{ sec_name }}</h2>
+        <ul>
+            {% for item in items %}
+            <li><a href="/faq/{{ item.id }}?locale={{ locale }}">{{ item.title[locale] or item.title['zh-tw'] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

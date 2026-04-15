@@ -1,0 +1,1748 @@
+[
+  {
+    "id": "001",
+    "category": "新手入門",
+    "section": "Podcast",
+    "title": {
+      "zh-tw": "財經Ｍ平方有 Podcast 或 YouTube 嗎?",
+      "zh-cn": "财经Ｍ平方有 Podcast 或 YouTube 吗？",
+      "en": "Does MacroMicro have a Podcast or YouTube channel?"
+    },
+    "status": "draft",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "新手入門/Podcast/001-財經Ｍ平方有-Podcast-或-YouTube-嗎.md"
+  },
+  {
+    "id": "002",
+    "category": "帳號與登入",
+    "section": "帳號登入",
+    "title": {
+      "zh-tw": "為什麼登入中的帳號一直被登出，經常要重新登入?",
+      "zh-cn": "为什么登录中的账号一直被登出，经常要重新登录？",
+      "en": "Why does my account keep getting logged out?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "帳號與登入/帳號登入/002-為什麼登入中的帳號一直被登出經常要重新登入.md"
+  },
+  {
+    "id": "003",
+    "category": "功能操作指南",
+    "section": "圖表",
+    "title": {
+      "zh-tw": "「最新值」和「浮水印」是什麼功能？",
+      "zh-cn": "「最新值」和「浮水印」是什么功能？",
+      "en": "What are the \"Latest Value\" and \"Watermark\" features?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "功能操作指南/圖表/003-最新值和浮水印是什麼功能.md"
+  },
+  {
+    "id": "004",
+    "category": "帳號與登入",
+    "section": "合併帳號",
+    "title": {
+      "zh-tw": "怎麼合併我在網站上註冊的多個帳號？",
+      "zh-cn": "怎么合并我在网站上注册的多个账号？",
+      "en": "How do I merge multiple accounts registered on the site?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "帳號與登入/合併帳號/004-怎麼合併我在網站上註冊的多個帳號.md"
+  },
+  {
+    "id": "005",
+    "category": "帳號與登入",
+    "section": "合併帳號",
+    "title": {
+      "zh-tw": "如何確認帳號是否合併成功？",
+      "zh-cn": "如何确认账号是否合并成功？",
+      "en": "How do I confirm that my accounts have been merged successfully?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "帳號與登入/合併帳號/005-如何確認帳號是否合併成功.md"
+  },
+  {
+    "id": "006",
+    "category": "帳號與登入",
+    "section": "合併帳號",
+    "title": {
+      "zh-tw": "沒收到合併帳號的驗證信該怎麼辦？",
+      "zh-cn": "没收到合并账号的验证邮件该怎么办？",
+      "en": "What should I do if I didn't receive the account merge verification email?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "帳號與登入/合併帳號/006-沒收到合併帳號的驗證信該怎麼辦.md"
+  },
+  {
+    "id": "007",
+    "category": "功能操作指南",
+    "section": "圖表",
+    "title": {
+      "zh-tw": "如何匯出數據圖片？",
+      "zh-cn": "如何导出数据图片？",
+      "en": "How do I export chart images?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "功能操作指南/圖表/007-如何匯出數據圖片.md"
+  },
+  {
+    "id": "008",
+    "category": "方案與訂閱",
+    "section": "訂閱資訊",
+    "title": {
+      "en": "Can I still view reports I received during my subscription after cancelling?",
+      "zh-cn": "取消订阅后，会员期间收到的报告还能观看吗？",
+      "zh-tw": "取消訂閱後，會員期間收到的報告還能觀看嗎？"
+    },
+    "status": "published",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 8,
+    "file": "方案與訂閱/訂閱資訊/008-取消訂閱後會員期間收到的報告還能觀看嗎.md"
+  },
+  {
+    "id": "009",
+    "category": "新手入門",
+    "section": "Podcast",
+    "title": {
+      "zh-tw": "Apple Podcast 如何調整集數排序？",
+      "zh-cn": "Apple Podcast 如何调整集数排序？",
+      "en": "How do I change the episode order on Apple Podcasts?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "新手入門/Podcast/009-Apple-Podcast-如何調整集數排序.md"
+  },
+  {
+    "id": "010",
+    "category": "功能操作指南",
+    "section": "數據與下載",
+    "title": {
+      "zh-tw": "如果當月的下載額度使用完畢，該如何能夠繼續下載？",
+      "zh-cn": "如果当月的下载额度使用完毕，该如何能够继续下载？",
+      "en": "What can I do if I've used up my monthly download quota?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "功能操作指南/數據與下載/010-如果當月的下載額度使用完畢該如何能夠繼續下載.md"
+  },
+  {
+    "id": "011",
+    "category": "功能操作指南",
+    "section": "數據與下載",
+    "title": {
+      "zh-tw": "為什麼數據無法下載？",
+      "zh-cn": "为什么数据无法下载？",
+      "en": "Why can't I download data?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "功能操作指南/數據與下載/011-為什麼數據無法下載.md"
+  },
+  {
+    "id": "012",
+    "category": "功能操作指南",
+    "section": "數據與下載",
+    "title": {
+      "zh-tw": "重複下載數據會扣除下載額度嗎？",
+      "zh-cn": "重复下载数据会扣除下载额度吗？",
+      "en": "Does re-downloading data count against my quota?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "功能操作指南/數據與下載/012-重複下載數據會扣除下載額度嗎.md"
+  },
+  {
+    "id": "013",
+    "category": "功能操作指南",
+    "section": "數據與下載",
+    "title": {
+      "zh-tw": "如何找到過去下載的數據？",
+      "zh-cn": "如何找到过去下载的数据？",
+      "en": "How do I find my past data downloads?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 6,
+    "file": "功能操作指南/數據與下載/013-如何找到過去下載的數據.md"
+  },
+  {
+    "id": "014",
+    "category": "功能操作指南",
+    "section": "數據與下載",
+    "title": {
+      "zh-tw": "數據下載的檔案為何？",
+      "zh-cn": "数据下载的文件格式是什么？",
+      "en": "What file format are downloaded datasets in?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 7,
+    "file": "功能操作指南/數據與下載/014-數據下載的檔案為何.md"
+  },
+  {
+    "id": "015",
+    "category": "功能操作指南",
+    "section": "企業方案 (MM Business)",
+    "title": {
+      "zh-tw": "如何使用MM Business進行團隊協作？",
+      "zh-cn": "如何使用 MM Business 进行团队协作？",
+      "en": "How do I use MM Business for team collaboration?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "功能操作指南/企業方案-MM-Business/015-如何使用MM-Business進行團隊協作.md"
+  },
+  {
+    "id": "016",
+    "category": "付款與帳務",
+    "section": "發票與統編",
+    "title": {
+      "zh-tw": "訂閱或購買課程會開發票嗎？可以開立公司統編嗎？",
+      "zh-cn": "订阅或购买课程会开发票吗？可以开立公司统编吗？",
+      "en": "Will I receive an invoice for subscriptions or course purchases? Can I add a company tax ID?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "付款與帳務/發票與統編/016-訂閱或購買課程會開發票嗎可以開立公司統編嗎.md"
+  },
+  {
+    "id": "017",
+    "category": "方案與訂閱",
+    "section": "訂閱資訊",
+    "title": {
+      "zh-tw": "如何訂閱MM獨家報告？",
+      "zh-cn": "如何订阅 MM 独家报告？",
+      "en": "How do I subscribe to MM Exclusive Reports?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "方案與訂閱/訂閱資訊/017-如何訂閱MM獨家報告.md"
+  },
+  {
+    "id": "018",
+    "category": "方案與訂閱",
+    "section": "推薦朋友與 M幣",
+    "title": {
+      "zh-tw": "專屬推薦碼在哪裡",
+      "zh-cn": "专属推荐码在哪里",
+      "en": "Where can I find my referral code?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "方案與訂閱/推薦朋友與-M幣/018-專屬推薦碼在哪裡.md"
+  },
+  {
+    "id": "019",
+    "category": "總經線上學院",
+    "section": "課程使用",
+    "title": {
+      "zh-tw": "課程無法播放怎麼辦？",
+      "zh-cn": "课程无法播放怎么办？",
+      "en": "What should I do if a course won't play?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "總經線上學院/課程使用/019-課程無法播放怎麼辦.md"
+  },
+  {
+    "id": "020",
+    "category": "總經線上學院",
+    "section": "課程購買",
+    "title": {
+      "zh-tw": "如何購買課程？",
+      "zh-cn": "如何购买课程？",
+      "en": "How do I purchase a course?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "總經線上學院/課程購買/020-如何購買課程.md"
+  },
+  {
+    "id": "021",
+    "category": "方案與訂閱",
+    "section": "訂閱資訊",
+    "title": {
+      "zh-tw": "MM獨家報告可以看到哪些內容？",
+      "zh-cn": "MM 独家报告可以看到哪些内容？",
+      "en": "What content is included in MM Exclusive Reports?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 6,
+    "file": "方案與訂閱/訂閱資訊/021-MM獨家報告可以看到哪些內容.md"
+  },
+  {
+    "id": "022",
+    "category": "功能操作指南",
+    "section": "數據與下載",
+    "title": {
+      "zh-tw": "數據可以下載嗎？",
+      "zh-cn": "数据可以下载吗？",
+      "en": "Can I download data?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "功能操作指南/數據與下載/022-數據可以下載嗎.md"
+  },
+  {
+    "id": "023",
+    "category": "方案與訂閱",
+    "section": "推薦朋友與 M幣",
+    "title": {
+      "zh-tw": "邀請朋友訂閱能得到什麼？",
+      "zh-cn": "邀请朋友订阅能得到什么？",
+      "en": "What do I get for referring a friend?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "方案與訂閱/推薦朋友與-M幣/023-邀請朋友訂閱能得到什麼.md"
+  },
+  {
+    "id": "024",
+    "category": "方案與訂閱",
+    "section": "推薦朋友與 M幣",
+    "title": {
+      "zh-tw": "訂閱中的會員，還能用M幣兌換訂閱效期嗎？",
+      "zh-cn": "订阅中的会员，还能用 M幣 兑换订阅期限吗？",
+      "en": "Can I redeem M-Coins to extend my subscription while already subscribed?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "方案與訂閱/推薦朋友與-M幣/024-訂閱中的會員還能用M幣兌換訂閱效期嗎.md"
+  },
+  {
+    "id": "025",
+    "category": "方案與訂閱",
+    "section": "推薦朋友與 M幣",
+    "title": {
+      "zh-tw": "M幣可以申請退款嗎？",
+      "zh-cn": "M幣 可以申请退款吗？",
+      "en": "Can I request a refund for M-Coins?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "方案與訂閱/推薦朋友與-M幣/025-M幣可以申請退款嗎.md"
+  },
+  {
+    "id": "026",
+    "category": "方案與訂閱",
+    "section": "推薦朋友與 M幣",
+    "title": {
+      "zh-tw": "M幣是什麼？",
+      "zh-cn": "M幣 是什么？",
+      "en": "What are M-Coins?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "方案與訂閱/推薦朋友與-M幣/026-M幣是什麼.md"
+  },
+  {
+    "id": "027",
+    "category": "付款與帳務",
+    "section": "發票與統編",
+    "title": {
+      "zh-tw": "發票要補打統編要怎麼辦？",
+      "zh-cn": "发票要补打统编要怎么办？",
+      "en": "How do I add a company tax ID to an invoice after payment?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "付款與帳務/發票與統編/027-發票要補打統編要怎麼辦.md"
+  },
+  {
+    "id": "028",
+    "category": "付款與帳務",
+    "section": "發票與統編",
+    "title": {
+      "zh-tw": "如何更改統編？",
+      "zh-cn": "如何更改统编？",
+      "en": "How do I update my company tax ID?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "付款與帳務/發票與統編/028-如何更改統編.md"
+  },
+  {
+    "id": "029",
+    "category": "付款與帳務",
+    "section": "發票與統編",
+    "title": {
+      "zh-tw": "付款後何時會收到發票？發票形式為何？",
+      "zh-cn": "付款后何时会收到发票？发票形式是什么？",
+      "en": "When will I receive my invoice, and what format will it be in?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "付款與帳務/發票與統編/029-付款後何時會收到發票發票形式為何.md"
+  },
+  {
+    "id": "030",
+    "category": "方案與訂閱",
+    "section": "團隊方案",
+    "title": {
+      "zh-tw": "團隊方案是什麼？",
+      "zh-cn": "团队方案是什么？",
+      "en": "What are the team plans?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "方案與訂閱/團隊方案/030-團隊方案是什麼.md"
+  },
+  {
+    "id": "031",
+    "category": "付款與帳務",
+    "section": "付費紀錄",
+    "title": {
+      "zh-tw": "如何找到付費紀錄？",
+      "zh-cn": "如何找到付费记录？",
+      "en": "How do I find my payment history?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "付款與帳務/付費紀錄/031-如何找到付費紀錄.md"
+  },
+  {
+    "id": "032",
+    "category": "付款與帳務",
+    "section": "付款方式",
+    "title": {
+      "zh-tw": "目前提供哪些付款方式？",
+      "zh-cn": "目前提供哪些付款方式？",
+      "en": "What payment methods are available?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "付款與帳務/付款方式/032-目前提供哪些付款方式.md"
+  },
+  {
+    "id": "033",
+    "category": "方案與訂閱",
+    "section": "自動續訂",
+    "title": {
+      "zh-tw": "自動續約訂閱的好處與執行？",
+      "zh-cn": "自动续约订阅的好处与执行？",
+      "en": "What are the benefits of auto-renewal?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "方案與訂閱/自動續訂/033-自動續約訂閱的好處與執行.md"
+  },
+  {
+    "id": "034",
+    "category": "方案與訂閱",
+    "section": "取消訂閱",
+    "title": {
+      "zh-tw": "如何取消訂閱？",
+      "zh-cn": "如何取消订阅？",
+      "en": "How do I cancel my subscription?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "方案與訂閱/取消訂閱/034-如何取消訂閱.md"
+  },
+  {
+    "id": "035",
+    "category": "方案與訂閱",
+    "section": "試用訂閱",
+    "title": {
+      "zh-tw": "免費體驗方案與自動訂閱說明",
+      "zh-cn": "免费体验方案与自动订阅说明",
+      "en": "Free trial plans and auto-subscription explained"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "方案與訂閱/試用訂閱/035-免費體驗方案與自動訂閱說明.md"
+  },
+  {
+    "id": "036",
+    "category": "方案與訂閱",
+    "section": "升級與變更方案",
+    "title": {
+      "zh-tw": "如何升級訂閱方案？",
+      "zh-cn": "如何升级订阅方案？",
+      "en": "How do I upgrade my subscription plan?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "方案與訂閱/升級與變更方案/036-如何升級訂閱方案.md"
+  },
+  {
+    "id": "037",
+    "category": "帳號與登入",
+    "section": "帳號設定",
+    "title": {
+      "zh-tw": "如何修改個人資料？",
+      "zh-cn": "如何修改个人资料？",
+      "en": "How do I edit my profile?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "帳號與登入/帳號設定/037-如何修改個人資料.md"
+  },
+  {
+    "id": "038",
+    "category": "帳號與登入",
+    "section": "帳號登入",
+    "title": {
+      "zh-tw": "目前提供哪些方式登入？",
+      "zh-cn": "目前提供哪些方式登录？",
+      "en": "What login methods are available?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "帳號與登入/帳號登入/038-目前提供哪些方式登入.md"
+  },
+  {
+    "id": "039",
+    "category": "帳號與登入",
+    "section": "帳號註冊",
+    "title": {
+      "zh-tw": "目前提供哪些方式註冊？",
+      "zh-cn": "目前提供哪些方式注册？",
+      "en": "How can I create an account?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "帳號與登入/帳號註冊/039-目前提供哪些方式註冊.md"
+  },
+  {
+    "id": "040",
+    "category": "新手入門",
+    "section": "開始使用 MacroMicro",
+    "title": {
+      "zh-tw": "如何尋求客服團隊協助我的問題",
+      "zh-cn": "如何寻求客服团队协助我的问题",
+      "en": "How can I get help from the support team?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "新手入門/開始使用-MacroMicro/040-如何尋求客服團隊協助我的問題.md"
+  },
+  {
+    "id": "041",
+    "category": "總經線上學院",
+    "section": "課程使用",
+    "title": {
+      "zh-tw": "如何找到過去買過的課程？",
+      "zh-cn": "如何找到过去买过的课程？",
+      "en": "How do I find courses I've previously purchased?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "總經線上學院/課程使用/041-如何找到過去買過的課程.md"
+  },
+  {
+    "id": "042",
+    "category": "總經線上學院",
+    "section": "課程使用",
+    "title": {
+      "zh-tw": "購買課程後是在哪裡上課？",
+      "zh-cn": "购买课程后是在哪里上课？",
+      "en": "Where do I access courses after purchasing?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "總經線上學院/課程使用/042-購買課程後是在哪裡上課.md"
+  },
+  {
+    "id": "043",
+    "category": "功能操作指南",
+    "section": "內容介紹",
+    "title": {
+      "zh-tw": "MM短評是什麼？",
+      "zh-cn": "MM 短评是什么？",
+      "en": "What is MM Daily?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "功能操作指南/內容介紹/043-MM短評是什麼.md"
+  },
+  {
+    "id": "044",
+    "category": "功能操作指南",
+    "section": "內容介紹",
+    "title": {
+      "zh-tw": "MM基本面指數是什麼？編制方法？",
+      "zh-cn": "MM 基本面指数是什么？编制方法？",
+      "en": "What is the MM Fundamental Index and how is it constructed?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "功能操作指南/內容介紹/044-MM基本面指數是什麼編制方法.md"
+  },
+  {
+    "id": "045",
+    "category": "功能操作指南",
+    "section": "內容介紹",
+    "title": {
+      "zh-tw": "景氣循環是什麼？",
+      "zh-cn": "景气循环是什么？",
+      "en": "What is the business cycle?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "功能操作指南/內容介紹/045-景氣循環是什麼.md"
+  },
+  {
+    "id": "046",
+    "category": "付款與帳務",
+    "section": "付費紀錄",
+    "title": {
+      "zh-tw": "訂閱時信用卡或 Paypal 有付款成功，但沒看到付款紀錄怎麼辦？",
+      "zh-cn": "订阅时信用卡或 PayPal 有付款成功，但没看到付款记录怎么办？",
+      "en": "My credit card or PayPal payment went through, but I don't see a payment record — what should I do?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "付款與帳務/付費紀錄/046-訂閱時信用卡或-Paypal-有付款成功但沒看到付款紀錄怎麼辦.md"
+  },
+  {
+    "id": "047",
+    "category": "方案與訂閱",
+    "section": "自動續訂",
+    "title": {
+      "zh-tw": "續約前的扣款會有通知嗎？",
+      "zh-cn": "续约前的扣款会有通知吗？",
+      "en": "Will I be notified before my subscription renews?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "方案與訂閱/自動續訂/047-續約前的扣款會有通知嗎.md"
+  },
+  {
+    "id": "048",
+    "category": "方案與訂閱",
+    "section": "升級與變更方案",
+    "title": {
+      "zh-tw": "如何將月繳方案轉為年繳方案？",
+      "zh-cn": "如何将月缴方案转为年缴方案？",
+      "en": "How do I switch from monthly to annual billing?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "方案與訂閱/升級與變更方案/048-如何將月繳方案轉為年繳方案.md"
+  },
+  {
+    "id": "049",
+    "category": "新手入門",
+    "section": "開始使用 MacroMicro",
+    "title": {
+      "zh-tw": "成為訂閱會員能享有哪些權益？",
+      "zh-cn": "成为订阅会员能享有哪些权益？",
+      "en": "What benefits do I get as a paid subscriber?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "新手入門/開始使用-MacroMicro/049-成為訂閱會員能享有哪些權益.md"
+  },
+  {
+    "id": "050",
+    "category": "新手入門",
+    "section": "開始使用 MacroMicro",
+    "title": {
+      "zh-tw": "如何獲得最新資訊？",
+      "zh-cn": "如何获得最新资讯？",
+      "en": "How can I stay up to date with MacroMicro?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "新手入門/開始使用-MacroMicro/050-如何獲得最新資訊.md"
+  },
+  {
+    "id": "051",
+    "category": "帳號與登入",
+    "section": "帳號登入",
+    "title": {
+      "zh-tw": "註冊帳號後，登入使用是否有裝置或 IP 限制？",
+      "zh-cn": "注册账号后，登录使用是否有设备或 IP 限制？",
+      "en": "Are there device or IP restrictions after registering?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "帳號與登入/帳號登入/051-註冊帳號後登入使用是否有裝置或-IP-限制.md"
+  },
+  {
+    "id": "052",
+    "category": "新手入門",
+    "section": "開始使用 MacroMicro",
+    "title": {
+      "zh-tw": "註冊成一般會員能享有哪些權益？",
+      "zh-cn": "注册成一般会员能享有哪些权益？",
+      "en": "What benefits do I get as a free member?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "新手入門/開始使用-MacroMicro/052-註冊成一般會員能享有哪些權益.md"
+  },
+  {
+    "id": "053",
+    "category": "新手入門",
+    "section": "開始使用 MacroMicro",
+    "title": {
+      "zh-tw": "我是初學者，該如何開始學習總經？",
+      "zh-cn": "我是初学者，该如何开始学习宏观经济？",
+      "en": "I'm a beginner — how should I start learning about macroeconomics?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "新手入門/開始使用-MacroMicro/053-我是初學者該如何開始學習總經.md"
+  },
+  {
+    "id": "054",
+    "category": "總經線上學院",
+    "section": "課程使用",
+    "title": {
+      "zh-tw": "購買課程後，無法觀看的原因？",
+      "zh-cn": "购买课程后，无法观看的原因？",
+      "en": "Why can't I watch a course I've purchased?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "總經線上學院/課程使用/054-購買課程後無法觀看的原因.md"
+  },
+  {
+    "id": "055",
+    "category": "總經線上學院",
+    "section": "課程使用",
+    "title": {
+      "zh-tw": "課程是否有時效性？",
+      "zh-cn": "课程是否有时效性？",
+      "en": "Do courses expire?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "總經線上學院/課程使用/055-課程是否有時效性.md"
+  },
+  {
+    "id": "056",
+    "category": "功能操作指南",
+    "section": "數據與下載",
+    "title": {
+      "zh-tw": "有想要看的數據，但網站上找不到怎麼辦？",
+      "zh-cn": "有想要看的数据，但网站上找不到怎么办？",
+      "en": "What if I can't find the data I'm looking for?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 8,
+    "file": "功能操作指南/數據與下載/056-有想要看的數據但網站上找不到怎麼辦.md"
+  },
+  {
+    "id": "057",
+    "category": "功能操作指南",
+    "section": "圖表",
+    "title": {
+      "zh-tw": "如何匯出圖表圖片？",
+      "zh-cn": "如何导出图表图片？",
+      "en": "How do I export a chart as an image?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "功能操作指南/圖表/057-如何匯出圖表圖片.md"
+  },
+  {
+    "id": "058",
+    "category": "付款與帳務",
+    "section": "付款方式",
+    "title": {
+      "zh-tw": "訂閱付款的信用卡到期或掛失，如何更換扣款信用卡？",
+      "zh-cn": "订阅付款的信用卡到期或挂失，如何更换扣款信用卡？",
+      "en": "My subscription credit card has expired or been cancelled — how do I update it?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "付款與帳務/付款方式/058-訂閱付款的信用卡到期或掛失如何更換扣款信用卡.md"
+  },
+  {
+    "id": "059",
+    "category": "方案與訂閱",
+    "section": "取消訂閱",
+    "title": {
+      "zh-tw": "訂閱效期還沒結束，想提前中斷可以嗎？",
+      "zh-cn": "订阅效期还没结束，想提前中断可以吗？",
+      "en": "Can I cancel my subscription early before it expires?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "方案與訂閱/取消訂閱/059-訂閱效期還沒結束想提前中斷可以嗎.md"
+  },
+  {
+    "id": "060",
+    "category": "方案與訂閱",
+    "section": "試用訂閱",
+    "title": {
+      "zh-tw": "試用時如何取消訂閱？",
+      "zh-cn": "试用时如何取消订阅？",
+      "en": "How do I cancel during a free trial?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "方案與訂閱/試用訂閱/060-試用時如何取消訂閱.md"
+  },
+  {
+    "id": "061",
+    "category": "方案與訂閱",
+    "section": "升級與變更方案",
+    "title": {
+      "zh-tw": "升級訂閱方案後，會影響正在進行的訂閱效期嗎？",
+      "zh-cn": "升级订阅方案后，会影响正在进行的订阅效期吗？",
+      "en": "Will upgrading my plan affect my current subscription period?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "方案與訂閱/升級與變更方案/061-升級訂閱方案後會影響正在進行的訂閱效期嗎.md"
+  },
+  {
+    "id": "062",
+    "category": "方案與訂閱",
+    "section": "訂閱資訊",
+    "title": {
+      "zh-tw": "如何知道目前的訂閱方案與效期？",
+      "zh-cn": "如何知道目前的订阅方案与效期？",
+      "en": "How do I check my current subscription plan and expiry date?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "方案與訂閱/訂閱資訊/062-如何知道目前的訂閱方案與效期.md"
+  },
+  {
+    "id": "063",
+    "category": "帳號與登入",
+    "section": "帳號設定",
+    "title": {
+      "zh-tw": "如何更改電子報收件信箱？",
+      "zh-cn": "如何更改电子报收件邮箱？",
+      "en": "How do I change my newsletter email address?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "帳號與登入/帳號設定/063-如何更改電子報收件信箱.md"
+  },
+  {
+    "id": "064",
+    "category": "帳號與登入",
+    "section": "帳號登入",
+    "title": {
+      "zh-tw": "忘記帳號或密碼該怎麼辦？",
+      "zh-cn": "忘记账号或密码该怎么办？",
+      "en": "What should I do if I forgot my account or password?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "帳號與登入/帳號登入/064-忘記帳號或密碼該怎麼辦.md"
+  },
+  {
+    "id": "065",
+    "category": "帳號與登入",
+    "section": "帳號註冊",
+    "title": {
+      "zh-tw": "註冊後沒收到帳號啟用信該怎麼辦？",
+      "zh-cn": "注册后没收到账号启用邮件该怎么办？",
+      "en": "What should I do if I didn't receive my account activation email?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "帳號與登入/帳號註冊/065-註冊後沒收到帳號啟用信該怎麼辦.md"
+  },
+  {
+    "id": "066",
+    "category": "功能操作指南",
+    "section": "功能與工具",
+    "title": {
+      "zh-tw": "如何取得M平方圖片與文章的授權？",
+      "zh-cn": "如何取得 M 平方图片与文章的授权？",
+      "en": "How do I get permission to use MacroMicro's charts or articles?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "功能操作指南/功能與工具/066-如何取得M平方圖片與文章的授權.md"
+  },
+  {
+    "id": "067",
+    "category": "總經線上學院",
+    "section": "課程購買",
+    "title": {
+      "zh-tw": "購買課程後可以退款嗎？",
+      "zh-cn": "购买课程后可以退款吗？",
+      "en": "Can I get a refund after purchasing a course?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "總經線上學院/課程購買/067-購買課程後可以退款嗎.md"
+  },
+  {
+    "id": "068",
+    "category": "付款與帳務",
+    "section": "付款方式",
+    "title": {
+      "zh-tw": "使用信用卡或 Paypal 付款訂閱，但付款失敗怎麼辦？",
+      "zh-cn": "使用信用卡或 PayPal 付款订阅，但付款失败怎么办？",
+      "en": "My credit card or PayPal payment failed — what should I do?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "付款與帳務/付款方式/068-使用信用卡或-Paypal-付款訂閱但付款失敗怎麼辦.md"
+  },
+  {
+    "id": "069",
+    "category": "方案與訂閱",
+    "section": "自動續訂",
+    "title": {
+      "zh-tw": "如何取消自動續訂？",
+      "zh-cn": "如何取消自动续订？",
+      "en": "How do I turn off auto-renewal?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "方案與訂閱/自動續訂/069-如何取消自動續訂.md"
+  },
+  {
+    "id": "070",
+    "category": "方案與訂閱",
+    "section": "取消訂閱",
+    "title": {
+      "zh-tw": "訂閱時使用信用卡或 Paypal 付款，要怎麼取消訂閱？",
+      "zh-cn": "订阅时使用信用卡或 PayPal 付款，要怎么取消订阅？",
+      "en": "How do I cancel a subscription paid by credit card or PayPal?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "方案與訂閱/取消訂閱/070-訂閱時使用信用卡或-Paypal-付款要怎麼取消訂閱.md"
+  },
+  {
+    "id": "071",
+    "category": "方案與訂閱",
+    "section": "試用訂閱",
+    "title": {
+      "zh-tw": "試用訂閱結束後忘記取消被自動扣款，是否能退款？",
+      "zh-cn": "试用订阅结束后忘记取消被自动扣款，是否能退款？",
+      "en": "I forgot to cancel my trial and was charged automatically — can I get a refund?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "方案與訂閱/試用訂閱/071-試用訂閱結束後忘記取消被自動扣款是否能退款.md"
+  },
+  {
+    "id": "072",
+    "category": "方案與訂閱",
+    "section": "訂閱資訊",
+    "title": {
+      "zh-tw": "訂閱後無法享有訂閱會員的權益原因？",
+      "zh-cn": "订阅后无法享有订阅会员的权益原因？",
+      "en": "Why am I not getting subscriber benefits after subscribing?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "方案與訂閱/訂閱資訊/072-訂閱後無法享有訂閱會員的權益原因.md"
+  },
+  {
+    "id": "073",
+    "category": "帳號與登入",
+    "section": "合併帳號",
+    "title": {
+      "zh-tw": "用了兩個帳號重複訂閱怎麼辦？",
+      "zh-cn": "用了两个账号重复订阅怎么办？",
+      "en": "I accidentally subscribed with two different accounts — what do I do?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "帳號與登入/合併帳號/073-用了兩個帳號重複訂閱怎麼辦.md"
+  },
+  {
+    "id": "074",
+    "category": "帳號與登入",
+    "section": "帳號設定",
+    "title": {
+      "zh-tw": "如何取消電子報信件？",
+      "zh-cn": "如何取消电子报邮件？",
+      "en": "How do I unsubscribe from newsletter emails?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "帳號與登入/帳號設定/074-如何取消電子報信件.md"
+  },
+  {
+    "id": "075",
+    "category": "帳號與登入",
+    "section": "帳號設定",
+    "title": {
+      "zh-tw": "如何更改密碼？",
+      "zh-cn": "如何更改密码？",
+      "en": "How do I change my password?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "帳號與登入/帳號設定/075-如何更改密碼.md"
+  },
+  {
+    "id": "076",
+    "category": "付款與帳務",
+    "section": "付款方式",
+    "title": {
+      "zh-tw": "如何解除約定信用卡？",
+      "zh-cn": "如何解除约定信用卡？",
+      "en": "How do I remove my linked credit card?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 6,
+    "file": "付款與帳務/付款方式/076-如何解除約定信用卡.md"
+  },
+  {
+    "id": "077",
+    "category": "功能操作指南",
+    "section": "企業方案 (MM Business)",
+    "title": {
+      "zh-tw": "有提供 API 服務嗎？",
+      "zh-cn": "有提供 API 服务吗？",
+      "en": "Does MacroMicro offer an API?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "功能操作指南/企業方案-MM-Business/077-有提供-API-服務嗎.md"
+  },
+  {
+    "id": "078",
+    "category": "總經線上學院",
+    "section": "課程購買",
+    "title": {
+      "zh-tw": "如何使用課程兌換碼與專屬折扣碼？",
+      "zh-cn": "如何使用课程兑换码与专属折扣码？",
+      "en": "How do I use a course redemption code or discount code?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "總經線上學院/課程購買/078-如何使用課程兌換碼與專屬折扣碼.md"
+  },
+  {
+    "id": "079",
+    "category": "功能操作指南",
+    "section": "圖表",
+    "title": {
+      "zh-tw": "網站圖表上的灰底代表什麼？",
+      "zh-cn": "网站图表上的灰底代表什么？",
+      "en": "What do the gray shaded areas on charts represent?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "功能操作指南/圖表/079-網站圖表上的灰底代表什麼.md"
+  },
+  {
+    "id": "080",
+    "category": "功能操作指南",
+    "section": "數據與下載",
+    "title": {
+      "zh-tw": "訂閱後就能下載數據嗎？",
+      "zh-cn": "订阅后就能下载数据吗？",
+      "en": "Can I download data after subscribing?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "功能操作指南/數據與下載/080-訂閱後就能下載數據嗎.md"
+  },
+  {
+    "id": "081",
+    "category": "帳號與登入",
+    "section": "帳號設定",
+    "title": {
+      "zh-tw": "如何變更電子報信件的語系？",
+      "zh-cn": "如何变更电子报邮件的语系？",
+      "en": "How do I change the language of my newsletter emails?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 6,
+    "file": "帳號與登入/帳號設定/081-如何變更電子報信件的語系.md"
+  },
+  {
+    "id": "082",
+    "category": "帳號與登入",
+    "section": "帳號設定",
+    "title": {
+      "zh-tw": "如何更改 Email 帳號的登入信箱？",
+      "zh-cn": "如何更改 Email 账号的登录邮箱？",
+      "en": "How do I change the email address used to log into my account?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "帳號與登入/帳號設定/082-如何更改-Email-帳號的登入信箱.md"
+  },
+  {
+    "id": "083",
+    "category": "功能操作指南",
+    "section": "功能與工具",
+    "title": {
+      "zh-tw": "MM全球財經日曆是什麼？如何獲得？",
+      "zh-cn": "MM 全球财经日历是什么？如何获得？",
+      "en": "What is the MM Global Economic Calendar and how do I get it?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 1,
+    "file": "功能操作指南/功能與工具/083-MM全球財經日曆是什麼如何獲得.md"
+  },
+  {
+    "id": "084",
+    "category": "方案與訂閱",
+    "section": "訂閱資訊",
+    "title": {
+      "zh-tw": "付費訂閱後能免費看所有課程嗎？",
+      "zh-cn": "付费订阅后能免费看所有课程吗？",
+      "en": "Can I watch all courses for free after subscribing?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "方案與訂閱/訂閱資訊/084-付費訂閱後能免費看所有課程嗎.md"
+  },
+  {
+    "id": "085",
+    "category": "功能操作指南",
+    "section": "圖表",
+    "title": {
+      "zh-tw": "圖表上的 L、R 代表什麼？",
+      "zh-cn": "图表上的 L、R 代表什么？",
+      "en": "What do L and R mean on charts?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "功能操作指南/圖表/085-圖表上的-LR-代表什麼.md"
+  },
+  {
+    "id": "086",
+    "category": "付款與帳務",
+    "section": "付款方式",
+    "title": {
+      "zh-tw": "使用信用卡付款訂閱，沒收到 3D OTP 驗證簡訊怎麼辦？",
+      "zh-cn": "使用信用卡付款订阅，没收到 3D OTP 验证短信怎么办？",
+      "en": "I didn't receive a 3D OTP verification SMS when paying by credit card — what should I do?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 3,
+    "file": "付款與帳務/付款方式/086-使用信用卡付款訂閱沒收到-3D-OTP-驗證簡訊怎麼辦.md"
+  },
+  {
+    "id": "087",
+    "category": "方案與訂閱",
+    "section": "訂閱資訊",
+    "title": {
+      "zh-tw": "終身訂閱優惠是什麼？",
+      "zh-cn": "终身订阅优惠是什么？",
+      "en": "What is the lifetime pricing benefit?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "方案與訂閱/訂閱資訊/087-終身訂閱優惠是什麼.md"
+  },
+  {
+    "id": "088",
+    "category": "帳號與登入",
+    "section": "帳號設定",
+    "title": {
+      "zh-tw": "如何刪除帳號？",
+      "zh-cn": "如何删除账号？",
+      "en": "How do I delete my account?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 7,
+    "file": "帳號與登入/帳號設定/088-如何刪除帳號.md"
+  },
+  {
+    "id": "089",
+    "category": "未分類",
+    "section": "一般",
+    "title": {
+      "zh-tw": "怎麼串接《MM全球財經日曆》到 Google Calendar 或 Apple Calendar ？",
+      "zh-cn": "怎么串接《MM 全球财经日历》到 Google Calendar 或 Apple Calendar？",
+      "en": "How do I sync the MM Global Economic Calendar to Google Calendar or Apple Calendar?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 0,
+    "file": "未分類/一般/089-怎麼串接MM全球財經日曆到-Google-Calendar-或-Apple-Calendar.md"
+  },
+  {
+    "id": "090",
+    "category": "功能操作指南",
+    "section": "圖表",
+    "title": {
+      "zh-tw": "圖表上的 SA、NSA、SAAR、YoY、MoM、QoQ、CA 代表什麼？",
+      "zh-cn": "图表上的 SA、NSA、SAAR、YoY、MoM、QoQ、CA 代表什么？",
+      "en": "What do SA, NSA, SAAR, YoY, MoM, QoQ, and CA mean on charts?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 6,
+    "file": "功能操作指南/圖表/090-圖表上的-SANSASAARYoYMoMQoQCA-代表什麼.md"
+  },
+  {
+    "id": "091",
+    "category": "付款與帳務",
+    "section": "付款方式",
+    "title": {
+      "zh-tw": "約定信用卡安全嗎？",
+      "zh-cn": "约定信用卡安全吗？",
+      "en": "Is it safe to save my credit card on the platform?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 7,
+    "file": "付款與帳務/付款方式/091-約定信用卡安全嗎.md"
+  },
+  {
+    "id": "092",
+    "category": "方案與訂閱",
+    "section": "訂閱資訊",
+    "title": {
+      "zh-tw": "訂閱後還能看到以前的獨家報告嗎？",
+      "zh-cn": "订阅后还能看到以前的独家报告吗？",
+      "en": "Can I view past exclusive reports after subscribing?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 7,
+    "file": "方案與訂閱/訂閱資訊/092-訂閱後還能看到以前的獨家報告嗎.md"
+  },
+  {
+    "id": "093",
+    "category": "功能操作指南",
+    "section": "圖表",
+    "title": {
+      "zh-tw": "如何區分圖表來源是來自官方還是用戶？",
+      "zh-cn": "如何区分图表来源是来自官方还是用户？",
+      "en": "How do I tell if a chart is from MacroMicro or a user?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 7,
+    "file": "功能操作指南/圖表/093-如何區分圖表來源是來自官方還是用戶.md"
+  },
+  {
+    "id": "094",
+    "category": "功能操作指南",
+    "section": "內容介紹",
+    "title": {
+      "zh-tw": "MM用戶信心指標是什麼？",
+      "zh-cn": "MM 用户信心指标是什么？",
+      "en": "What is the MM User Sentiment Index?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 4,
+    "file": "功能操作指南/內容介紹/094-MM用戶信心指標是什麼.md"
+  },
+  {
+    "id": "095",
+    "category": "新手入門",
+    "section": "Podcast",
+    "title": {
+      "zh-tw": "Podcast 更新頻率？",
+      "zh-cn": "Podcast 更新频率？",
+      "en": "How often is the Podcast updated?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 2,
+    "file": "新手入門/Podcast/095-Podcast-更新頻率.md"
+  },
+  {
+    "id": "096",
+    "category": "帳號與登入",
+    "section": "帳號登入",
+    "title": {
+      "zh-tw": "訂閱會員會有裝置或 IP 限制嗎？",
+      "zh-cn": "订阅会员会有设备或 IP 限制吗？",
+      "en": "Are there device or IP restrictions for subscribers?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 5,
+    "file": "帳號與登入/帳號登入/096-訂閱會員會有裝置或-IP-限制嗎.md"
+  },
+  {
+    "id": "097",
+    "category": "新手入門",
+    "section": "開始使用 MacroMicro",
+    "title": {
+      "zh-tw": "有提供 App 下載嗎？",
+      "zh-cn": "有提供 App 下载吗？",
+      "en": "Is there a mobile app available?"
+    },
+    "status": "published",
+    "locales": {
+      "zh-tw": true,
+      "zh-cn": true,
+      "en": true
+    },
+    "order": 6,
+    "file": "新手入門/開始使用-MacroMicro/097-有提供-App-下載嗎.md"
+  }
+]

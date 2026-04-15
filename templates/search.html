@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{% if locale == 'en' %}Search{% elif locale == 'zh-cn' %}搜索{% else %}搜尋{% endif %} - MacroMicro FAQ{% endblock %}
+{% block content %}
+<div class="search-results">
+    <h1>{% if locale == 'en' %}Search Results{% elif locale == 'zh-cn' %}搜索结果{% else %}搜尋結果{% endif %}</h1>
+    {% if query %}
+    <p class="search-info">{% if locale == 'en' %}"{{ query }}" - {{ results|length }} results{% elif locale == 'zh-cn' %}"{{ query }}" - 共 {{ results|length }} 条结果{% else %}"{{ query }}" - 共 {{ results|length }} 筆結果{% endif %}</p>
+    {% endif %}
+    {% if results %}
+    <ul class="result-list">
+        {% for item in results %}
+        <li>
+            <a href="/faq/{{ item.id }}?locale={{ locale }}">{{ item.title[locale] or item.title['zh-tw'] }}</a>
+            <span class="result-meta">{{ item.category }} › {{ item.section }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% elif query %}
+    <p class="no-results">{% if locale == 'en' %}No results found.{% elif locale == 'zh-cn' %}未找到相关结果。{% else %}找不到相關結果。{% endif %}</p>
+    {% endif %}
+</div>
+{% endblock %}

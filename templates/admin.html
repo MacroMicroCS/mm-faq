@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Admin</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">MacroMicro FAQ</a>
+            <div class="nav-right">
+                <a href="/admin" class="admin-link active">Admin</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="admin-page">
+            <h1>FAQ 管理後台</h1>
+            <div class="admin-filters">
+                <select id="filter-status">
+                    <option value="all">全部狀態</option>
+                    <option value="published" selected>已上架</option>
+                    <option value="draft">草稿</option>
+                    <option value="archived">已下架</option>
+                </select>
+                <select id="filter-category">
+                    <option value="all">全部類別</option>
+                </select>
+            </div>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>類別</th>
+                        <th>段落</th>
+                        <th>標題</th>
+                        <th>狀態</th>
+                        <th>繁中</th>
+                        <th>簡中</th>
+                        <th>EN</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="faq-table-body">
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script>
+    const faqs = {{ faqs | tojson }};
+
+    // Populate category filter
+    const cats = [...new Set(faqs.map(f => f.category))].sort();
+    const catSelect = document.getElementById('filter-category');
+    cats.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c; opt.textContent = c;
+        catSelect.appendChild(opt);
+    });
+
+    function render() {
+        const statusFilter = document.getElementById('filter-status').value;
+        const catFilter = document.getElementById('filter-category').value;
+        const tbody = document.getElementById('faq-table-body');
+        tbody.innerHTML = '';
+
+        const filtered = faqs.filter(f => {
+            if (statusFilter !== 'all' && f.status !== statusFilter) return false;
+            if (catFilter !== 'all' && f.category !== catFilter) return false;
+            return true;
+        });
+
+        filtered.forEach(faq => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${faq.id}</td>
+                <td>${faq.category}</td>
+                <td>${faq.section}</td>
+                <td><a href="/faq/${faq.id}" target="_blank">${faq.title['zh-tw']}</a></td>
+                <td>
+                    <select class="status-select" data-id="${faq.id}" onchange="updateStatus('${faq.id}', this.value)">
+                        <option value="published" ${faq.status === 'published' ? 'selected' : ''}>已上架</option>
+                        <option value="draft" ${faq.status === 'draft' ? 'selected' : ''}>草稿</option>
+                        <option value="archived" ${faq.status === 'archived' ? 'selected' : ''}>已下架</option>
+                    </select>
+                </td>
+                <td><input type="checkbox" ${faq.locales['zh-tw'] ? 'checked' : ''} disabled title="繁中為必要語系"></td>
+                <td><input type="checkbox" ${faq.locales['zh-cn'] ? 'checked' : ''} onchange="updateLocale('${faq.id}', 'zh-cn', this.checked)"></td>
+                <td><input type="checkbox" ${faq.locales['en'] ? 'checked' : ''} onchange="updateLocale('${faq.id}', 'en', this.checked)"></td>
+                <td><a href="/admin/edit/${faq.id}">編輯</a> | <a href="/faq/${faq.id}" target="_blank">預覽</a></td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    async function updateStatus(id, status) {
+        const res = await fetch(`/api/faq/${id}/status`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({status})
+        });
+        if (res.ok) {
+            const faq = faqs.find(f => f.id === id);
+            if (faq) faq.status = status;
+        }
+    }
+
+    async function updateLocale(id, locale, enabled) {
+        const res = await fetch(`/api/faq/${id}/locales`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({locales: {[locale]: enabled}})
+        });
+        if (res.ok) {
+            const faq = faqs.find(f => f.id === id);
+            if (faq) faq.locales[locale] = enabled;
+        }
+    }
+
+    document.getElementById('filter-status').addEventListener('change', render);
+    document.getElementById('filter-category').addEventListener('change', render);
+    render();
+    </script>
+</body>
+</html>
