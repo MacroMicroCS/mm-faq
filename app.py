@@ -133,8 +133,7 @@ def get_related_faqs(index, current_item, locale="zh-tw", limit=5):
 async def home(request: Request, locale: str = Query("zh-tw")):
     index = load_index()
     category_list = get_category_list(index, locale)
-    return templates.TemplateResponse("index.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "index.html", {
         "category_list": category_list,
         "category_icons": CATEGORY_ICONS,
         "locale": locale,
@@ -149,8 +148,7 @@ async def category_page(request: Request, category_name: str, locale: str = Quer
     sections = categories.get(category_name, {})
     if not sections:
         return HTMLResponse("<h1>Not Found</h1>", status_code=404)
-    return templates.TemplateResponse("category.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "category.html", {
         "category_name": category_name,
         "sections": sections,
         "locale": locale,
@@ -174,8 +172,7 @@ async def faq_detail(request: Request, faq_id: str, locale: str = Query("zh-tw")
     title = item["title"].get(locale, item["title"]["zh-tw"])
     related = get_related_faqs(index, item, locale)
 
-    return templates.TemplateResponse("faq_detail.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "faq_detail.html", {
         "item": item,
         "title": title,
         "content_html": content_html,
@@ -205,8 +202,7 @@ async def search(request: Request, q: str = "", locale: str = Query("zh-tw")):
                 content = get_content_by_locale(post, locale)
                 if q_lower in content.lower():
                     results.append(item)
-    return templates.TemplateResponse("search.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "search.html", {
         "query": q,
         "results": results,
         "locale": locale,
@@ -219,8 +215,7 @@ async def search(request: Request, q: str = "", locale: str = Query("zh-tw")):
 @app.get("/admin", response_class=HTMLResponse)
 async def admin_page(request: Request):
     index = load_index()
-    return templates.TemplateResponse("admin.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "admin.html", {
         "faqs": index,
         "locale_names": LOCALE_NAMES,
     })
@@ -241,8 +236,7 @@ async def admin_edit_page(request: Request, faq_id: str):
     content_zhcn = get_content_by_locale(post, "zh-cn")
     content_en = get_content_by_locale(post, "en")
 
-    return templates.TemplateResponse("admin_edit.html", {
-        "request": request,
+    return templates.TemplateResponse(request, "admin_edit.html", {
         "item": item,
         "content_zhtw": content_zhtw,
         "content_zhcn": content_zhcn,
