@@ -1,0 +1,95 @@
+{% extends "tickets/base.html" %}
+{% block title %}{{ '編輯模板' if tpl else '新增模板' }}{% endblock %}
+{% block content %}
+<div class="page-header">
+    <a href="/tickets/templates" class="back-link">← 回覆模板</a>
+    <h1>{{ '編輯模板' if tpl else '新增模板' }}</h1>
+</div>
+<div class="edit-form-wrap">
+    <div class="form-group">
+        <label>模板名稱 <span class="required">*</span></label>
+        <input type="text" id="tpl-name" value="{{ tpl.name if tpl else '' }}" required>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label>分類</label>
+            <input type="text" id="tpl-category" value="{{ tpl.category if tpl else '' }}" placeholder="如：帳號問題、退款…">
+        </div>
+        <div class="form-group">
+            <label>語言</label>
+            <select id="tpl-language">
+                <option value="zh-tw" {% if not tpl or tpl.language == 'zh-tw' %}selected{% endif %}>繁體中文</option>
+                <option value="zh-cn" {% if tpl and tpl.language == 'zh-cn' %}selected{% endif %}>简体中文</option>
+                <option value="en" {% if tpl and tpl.language == 'en' %}selected{% endif %}>English</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>預設主旨（選填）</label>
+        <input type="text" id="tpl-subject" value="{{ tpl.subject if tpl else '' }}" placeholder="Re: {{ticket_subject}}">
+    </div>
+    <div class="form-group">
+        <label>搜尋關鍵字（選填）</label>
+        <input type="text" id="tpl-keywords" value="{{ tpl.search_keywords if tpl else '' }}" placeholder="取消、退費、登入…">
+    </div>
+    <div class="form-group">
+        <label>模板內容 <span class="required">*</span></label>
+        <div class="editor-toolbar">
+            <button type="button" onclick="wrapSel('**','**')"><b>B</b></button>
+            <button type="button" onclick="insertAtCursor('\n- ')">☰</button>
+            <span class="toolbar-sep"></span>
+            {% for v in all_variables %}
+            <button type="button" class="var-btn" onclick="insertAtCursor('{{ v }}')"><code>{{ v }}</code></button>
+            {% endfor %}
+        </div>
+        <textarea id="tpl-body" rows="14" placeholder="輸入模板內容，使用 {{變數}} 帶入動態內容…">{{ tpl.body_html if tpl else '' }}</textarea>
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="tpl-public" {% if not tpl or tpl.is_public %}checked{% endif %}>
+            公開（所有客服可使用）
+        </label>
+    </div>
+    <div class="form-actions">
+        <a href="/tickets/templates" class="btn">取消</a>
+        <button class="btn btn-primary" onclick="saveTemplate()">儲存</button>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const TPL_ID = {{ tpl.id if tpl else 'null' }};
+
+async function saveTemplate() {
+    const name = document.getElementById('tpl-name').value.trim();
+    const body = document.getElementById('tpl-body').value.trim();
+    if (!name || !body) { alert('請填寫名稱與內容'); return; }
+    const payload = {
+        name, body_html: body,
+        subject: document.getElementById('tpl-subject').value || null,
+        category: document.getElementById('tpl-category').value || null,
+        language: document.getElementById('tpl-language').value,
+        search_keywords: document.getElementById('tpl-keywords').value || null,
+        is_public: document.getElementById('tpl-public').checked,
+    };
+    const url = TPL_ID ? `/tickets/api/templates/${TPL_ID}` : '/tickets/api/templates';
+    const method = TPL_ID ? 'PUT' : 'POST';
+    const r = await fetch(url, {method, headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
+    if (r.ok) window.location.href = '/tickets/templates';
+    else alert('儲存失敗');
+}
+
+function wrapSel(before, after) {
+    const ta = document.getElementById('tpl-body');
+    const s = ta.selectionStart, e = ta.selectionEnd;
+    ta.value = ta.value.slice(0,s) + before + ta.value.slice(s,e) + after + ta.value.slice(e);
+}
+function insertAtCursor(text) {
+    const ta = document.getElementById('tpl-body');
+    const s = ta.selectionStart;
+    ta.value = ta.value.slice(0,s) + text + ta.value.slice(s);
+    ta.focus();
+    ta.selectionStart = ta.selectionEnd = s + text.length;
+}
+</script>
+{% endblock %}

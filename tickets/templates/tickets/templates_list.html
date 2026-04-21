@@ -1,0 +1,72 @@
+{% extends "tickets/base.html" %}
+{% block title %}回覆模板{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>回覆模板</h1>
+    <a href="/tickets/templates/new" class="btn btn-primary">＋ 新增模板</a>
+</div>
+
+<div class="search-bar">
+    <form method="get">
+        <input type="text" name="q" value="{{ q }}" placeholder="搜尋模板名稱、內容…" autofocus>
+        <button type="submit" class="btn">搜尋</button>
+    </form>
+</div>
+
+<div class="template-grid">
+    {% for tpl in templates %}
+    <div class="template-card">
+        <div class="template-card-header">
+            <h3>{{ tpl.name }}</h3>
+            <span class="tpl-lang">{{ tpl.language }}</span>
+            {% if tpl.category %}<span class="tpl-cat-badge">{{ tpl.category }}</span>{% endif %}
+        </div>
+        {% if tpl.subject %}<p class="tpl-subject">主旨：{{ tpl.subject }}</p>{% endif %}
+        <div class="tpl-preview">{{ tpl.body_html | striptags | truncate(120) }}</div>
+        <div class="tpl-vars">
+            {% if tpl.variables %}
+            {% for v in tpl.variables | replace("['","") | replace("']","") | replace("', '",",") | split(",") %}
+            <code>{{ v.strip() }}</code>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div class="template-card-footer">
+            <span class="use-count">使用 {{ tpl.use_count }} 次</span>
+            <div class="template-actions">
+                <a href="/tickets/templates/{{ tpl.id }}/edit" class="btn btn-sm">編輯</a>
+                <button class="btn btn-sm btn-danger" onclick="deleteTemplate({{ tpl.id }}, '{{ tpl.name }}')">刪除</button>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <p>尚未建立任何模板。</p>
+        <a href="/tickets/templates/new" class="btn btn-primary">建立第一個模板</a>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="variables-reference">
+    <h3>可用變數</h3>
+    <div class="vars-list">
+        {% for v in all_variables %}
+        <code class="var-chip" onclick="copyVar(this)">{{ v }}</code>
+        {% endfor %}
+    </div>
+    <p class="text-muted">點擊複製</p>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+async function deleteTemplate(id, name) {
+    if (!confirm(`確定刪除模板「${name}」？`)) return;
+    const r = await fetch(`/tickets/api/templates/${id}`, {method: 'DELETE'});
+    if (r.ok) window.location.reload();
+}
+function copyVar(el) {
+    navigator.clipboard.writeText(el.textContent);
+    el.style.background = 'var(--mm-primary)';
+    setTimeout(() => el.style.background = '', 800);
+}
+</script>
+{% endblock %}

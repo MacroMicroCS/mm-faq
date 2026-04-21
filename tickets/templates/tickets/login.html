@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客服系統登入 — MacroMicro</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/tickets/static/tickets/tickets.css">
+</head>
+<body class="login-body">
+    <div class="login-box">
+        <img src="/static/logo.svg" alt="MacroMicro" class="login-logo">
+        <h1>客服系統</h1>
+        {% if error %}
+        <div class="alert alert-error">{{ error }}</div>
+        {% endif %}
+        <form method="post" action="/tickets/login">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required autofocus placeholder="agent@macromicro.me">
+            </div>
+            <div class="form-group">
+                <label>密碼</label>
+                <input type="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">登入</button>
+        </form>
+    </div>
+</body>
+</html>

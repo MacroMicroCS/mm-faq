@@ -1,0 +1,217 @@
+{% extends "tickets/base.html" %}
+{% block title %}收件匣{% endblock %}
+{% block content %}
+<div class="inbox-header">
+    <h1>收件匣
+        {% if total %}<span class="count-badge">{{ total }}</span>{% endif %}
+    </h1>
+    <div class="inbox-actions">
+        <button class="btn btn-sm" id="bulk-action-btn" style="display:none" onclick="openBulkModal()">批次操作</button>
+        <button class="btn btn-primary btn-sm" onclick="openNewTicketModal()">＋ 新增 Ticket</button>
+    </div>
+</div>
+
+<div class="inbox-filters">
+    <form method="get" action="/tickets/inbox" id="filter-form">
+        <div class="filter-row">
+            <select name="status" onchange="this.form.submit()">
+                <option value="" {% if not status_filter %}selected{% endif %}>所有狀態</option>
+                {% for s, label in status_labels.items() %}
+                <option value="{{ s }}" {% if status_filter == s %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+            </select>
+            <select name="priority" onchange="this.form.submit()">
+                <option value="" {% if not priority_filter %}selected{% endif %}>所有優先級</option>
+                {% for p, label in priority_labels.items() %}
+                <option value="{{ p }}" {% if priority_filter == p %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+            </select>
+            <select name="assigned" onchange="this.form.submit()">
+                <option value="" {% if not assigned_filter %}selected{% endif %}>所有指派</option>
+                <option value="me" {% if assigned_filter == 'me' %}selected{% endif %}>指派給我</option>
+                <option value="unassigned" {% if assigned_filter == 'unassigned' %}selected{% endif %}>未指派</option>
+            </select>
+            <input type="text" name="q" placeholder="搜尋主旨…" value="{{ q }}" onchange="this.form.submit()">
+        </div>
+    </form>
+</div>
+
+<div class="ticket-table-wrap">
+    <table class="ticket-table">
+        <thead>
+            <tr>
+                <th class="col-check"><input type="checkbox" id="select-all" onchange="toggleSelectAll(this)"></th>
+                <th>編號</th>
+                <th>主旨</th>
+                <th>客戶</th>
+                <th>狀態</th>
+                <th>優先級</th>
+                <th>指派</th>
+                <th>更新時間</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ticket in tickets %}
+            <tr class="ticket-row {% if ticket.id not in read_ids %}unread{% endif %}" data-id="{{ ticket.id }}">
+                <td><input type="checkbox" class="ticket-check" value="{{ ticket.id }}" onchange="onTicketCheck()"></td>
+                <td class="col-number">
+                    <a href="/tickets/{{ ticket.id }}">#{{ ticket.number }}</a>
+                </td>
+                <td class="col-subject">
+                    <a href="/tickets/{{ ticket.id }}" class="ticket-subject-link">
+                        {% if ticket.id not in read_ids %}<span class="unread-dot"></span>{% endif %}
+                        {{ ticket.subject }}
+                    </a>
+                    {% if ticket.tags %}
+                    <span class="tag-list">
+                        {% for tt in ticket.tags %}<span class="tag" style="background:{{ tt.tag.color }}22;color:{{ tt.tag.color }}">{{ tt.tag.name }}</span>{% endfor %}
+                    </span>
+                    {% endif %}
+                </td>
+                <td>{{ ticket.customer.name or ticket.customer.email }}</td>
+                <td><span class="status-badge status-{{ ticket.status }}">{{ status_labels[ticket.status] }}</span></td>
+                <td><span class="priority-badge priority-{{ ticket.priority }}">{{ priority_labels[ticket.priority] }}</span></td>
+                <td>
+                    <select class="assign-select" data-ticket="{{ ticket.id }}" onchange="assignTicket(this)">
+                        <option value="">未指派</option>
+                        {% for a in all_agents %}
+                        <option value="{{ a.id }}" {% if ticket.assigned_agent_id == a.id %}selected{% endif %}>{{ a.name }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td class="col-time">{{ ticket.updated_at.strftime('%m/%d %H:%M') if ticket.updated_at else ticket.created_at.strftime('%m/%d %H:%M') }}</td>
+            </tr>
+            {% else %}
+            <tr><td colspan="8" class="empty-state">目前沒有 Ticket</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% if total_pages > 1 %}
+<div class="pagination">
+    {% if page > 1 %}<a href="?status={{ status_filter }}&page={{ page-1 }}&q={{ q }}" class="btn btn-sm">上一頁</a>{% endif %}
+    <span>第 {{ page }} / {{ total_pages }} 頁</span>
+    {% if page < total_pages %}<a href="?status={{ status_filter }}&page={{ page+1 }}&q={{ q }}" class="btn btn-sm">下一頁</a>{% endif %}
+</div>
+{% endif %}
+
+<!-- New Ticket Modal -->
+<div class="modal" id="new-ticket-modal" style="display:none">
+    <div class="modal-box">
+        <h2>新增 Ticket</h2>
+        <div class="form-group">
+            <label>客戶 Email</label>
+            <input type="email" id="new-customer-email" required>
+        </div>
+        <div class="form-group">
+            <label>客戶姓名（選填）</label>
+            <input type="text" id="new-customer-name">
+        </div>
+        <div class="form-group">
+            <label>主旨</label>
+            <input type="text" id="new-subject" required>
+        </div>
+        <div class="form-group">
+            <label>優先級</label>
+            <select id="new-priority">
+                {% for p, l in priority_labels.items() %}<option value="{{ p }}">{{ l }}</option>{% endfor %}
+            </select>
+        </div>
+        <div class="modal-actions">
+            <button class="btn" onclick="closeNewTicketModal()">取消</button>
+            <button class="btn btn-primary" onclick="createTicket()">建立</button>
+        </div>
+    </div>
+</div>
+
+<!-- Bulk Action Modal -->
+<div class="modal" id="bulk-modal" style="display:none">
+    <div class="modal-box">
+        <h2>批次操作</h2>
+        <div class="form-group">
+            <label>動作</label>
+            <select id="bulk-action-type">
+                <option value="status">變更狀態</option>
+                <option value="priority">變更優先級</option>
+                <option value="assign">指派客服</option>
+            </select>
+        </div>
+        <div class="form-group" id="bulk-value-wrap">
+            <label>值</label>
+            <select id="bulk-action-value">
+                {% for s, l in status_labels.items() %}<option value="{{ s }}">{{ l }}</option>{% endfor %}
+            </select>
+        </div>
+        <div class="modal-actions">
+            <button class="btn" onclick="document.getElementById('bulk-modal').style.display='none'">取消</button>
+            <button class="btn btn-primary" onclick="executeBulk()">執行</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const statusOptions = {{ status_labels | tojson }};
+const priorityOptions = {{ priority_labels | tojson }};
+const allAgents = {{ all_agents | tojson if all_agents else '[]' }};
+
+function toggleSelectAll(cb) {
+    document.querySelectorAll('.ticket-check').forEach(c => c.checked = cb.checked);
+    onTicketCheck();
+}
+function onTicketCheck() {
+    const checked = document.querySelectorAll('.ticket-check:checked').length;
+    document.getElementById('bulk-action-btn').style.display = checked ? 'inline-flex' : 'none';
+}
+function openNewTicketModal() { document.getElementById('new-ticket-modal').style.display = 'flex'; }
+function closeNewTicketModal() { document.getElementById('new-ticket-modal').style.display = 'none'; }
+function openBulkModal() { document.getElementById('bulk-modal').style.display = 'flex'; }
+
+async function assignTicket(select) {
+    const ticketId = select.dataset.ticket;
+    await fetch(`/tickets/api/tickets/${ticketId}/assign`, {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({agent_id: select.value ? parseInt(select.value) : null})
+    });
+}
+
+async function createTicket() {
+    const email = document.getElementById('new-customer-email').value;
+    const name = document.getElementById('new-customer-name').value;
+    const subject = document.getElementById('new-subject').value;
+    const priority = document.getElementById('new-priority').value;
+    if (!email || !subject) return;
+    const res = await fetch('/tickets/api/tickets/new', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({customer_email: email, customer_name: name, subject, priority})
+    });
+    const data = await res.json();
+    if (data.ok) window.location.href = `/tickets/${data.ticket_id}`;
+}
+
+async function executeBulk() {
+    const ids = Array.from(document.querySelectorAll('.ticket-check:checked')).map(c => parseInt(c.value));
+    const action = document.getElementById('bulk-action-type').value;
+    const value = document.getElementById('bulk-action-value').value;
+    await fetch('/tickets/api/tickets/bulk', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ticket_ids: ids, action, value})
+    });
+    window.location.reload();
+}
+
+// Sync bulk value options with action type
+document.getElementById('bulk-action-type')?.addEventListener('change', function() {
+    const select = document.getElementById('bulk-action-value');
+    select.innerHTML = '';
+    if (this.value === 'status') {
+        Object.entries(statusOptions).forEach(([v, l]) => select.add(new Option(l, v)));
+    } else if (this.value === 'priority') {
+        Object.entries(priorityOptions).forEach(([v, l]) => select.add(new Option(l, v)));
+    } else if (this.value === 'assign') {
+        allAgents.forEach(a => select.add(new Option(a.name, a.id)));
+    }
+});
+</script>
+{% endblock %}

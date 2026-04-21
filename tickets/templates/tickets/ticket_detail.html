@@ -1,0 +1,372 @@
+{% extends "tickets/base.html" %}
+{% block title %}#{{ ticket.number }} {{ ticket.subject }}{% endblock %}
+{% block content %}
+<div class="ticket-detail-layout">
+
+  <!-- Left: thread -->
+  <div class="thread-panel">
+    <div class="thread-header">
+      <div class="thread-title">
+        <a href="/tickets/inbox" class="back-link">← 收件匣</a>
+        <h2>#{{ ticket.number }} {{ ticket.subject }}</h2>
+      </div>
+      <div class="thread-meta">
+        <span class="status-badge status-{{ ticket.status }}">{{ status_labels[ticket.status] }}</span>
+        <span class="priority-badge priority-{{ ticket.priority }}">{{ priority_labels[ticket.priority] }}</span>
+      </div>
+    </div>
+
+    <!-- Collision banner -->
+    <div id="collision-banner" class="collision-banner" style="display:none"></div>
+
+    <!-- Messages -->
+    <div class="message-list" id="message-list">
+      {% for msg in ticket.messages %}
+        {% if not msg.is_draft %}
+        <div class="message-item {{ 'internal' if msg.is_internal else ('outbound' if msg.author_type == 'agent' else 'inbound') }}">
+          <div class="msg-header">
+            <span class="msg-author">
+              {% if msg.author_type == 'customer' %}{{ ticket.customer.name or ticket.customer.email }}
+              {% elif msg.author_type == 'agent' %}客服
+              {% else %}系統{% endif %}
+            </span>
+            {% if msg.is_internal %}<span class="internal-badge">內部備註</span>{% endif %}
+            <span class="msg-time">{{ msg.created_at.strftime('%Y/%m/%d %H:%M') }}</span>
+          </div>
+          <div class="msg-body">{{ msg.body_html | safe }}</div>
+          {% if msg.attachments %}
+          <div class="msg-attachments">
+            {% for att in msg.attachments %}
+            <a href="/static/uploads/tickets/{{ att.storage_path.split('/')[-1] }}" class="attachment-link">📎 {{ att.filename }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Reply box -->
+    <div class="reply-box" id="reply-box">
+      <div class="reply-tabs">
+        <button class="reply-tab active" onclick="setReplyMode('reply', this)">對外回覆</button>
+        <button class="reply-tab" onclick="setReplyMode('internal', this)">內部備註</button>
+      </div>
+
+      <div id="draft-notice" class="draft-notice" style="display:none">
+        📝 草稿已儲存 <button class="btn-link" onclick="discardDraft()">捨棄</button>
+      </div>
+
+      <!-- CC/BCC -->
+      <div id="reply-recipients" class="reply-recipients">
+        <div class="recipient-row">
+          <label>收件人</label>
+          <input type="text" id="reply-to" value="{{ ticket.customer.email }}" placeholder="收件人 email">
+        </div>
+        <div class="recipient-row" id="cc-row" style="display:none">
+          <label>CC</label>
+          <input type="text" id="reply-cc" placeholder="CC">
+        </div>
+        <div class="recipient-row" id="bcc-row" style="display:none">
+          <label>BCC</label>
+          <input type="text" id="reply-bcc" placeholder="BCC">
+        </div>
+        <div class="recipient-actions">
+          <button class="btn-link" onclick="toggleCC()">CC</button>
+          <button class="btn-link" onclick="toggleBCC()">BCC</button>
+        </div>
+      </div>
+
+      <!-- Template search -->
+      <div class="template-search-wrap">
+        <input type="text" id="template-search" placeholder="🔍 搜尋模板…" oninput="searchTemplates(this.value)" autocomplete="off">
+        <div class="template-suggestions" id="template-suggestions" style="display:none"></div>
+      </div>
+
+      <div class="editor-toolbar">
+        <button onclick="wrapText('**','**')" title="粗體"><b>B</b></button>
+        <button onclick="insertText('\n- ')" title="清單">☰</button>
+        <button onclick="insertFAQLink()" title="插入 FAQ 連結">🔗 FAQ</button>
+        <button onclick="generateAIDraft()" title="AI 草稿" class="btn-ai">✦ AI 草稿</button>
+      </div>
+
+      <textarea id="reply-body" rows="8" placeholder="輸入回覆內容…" oninput="scheduleDraftSave()"></textarea>
+
+      <div class="reply-actions">
+        <div class="reply-left">
+          <select id="reply-status" title="發送後狀態">
+            {% for s, l in status_labels.items() %}
+            <option value="{{ s }}" {% if ticket.status == s %}selected{% endif %}>發送後：{{ l }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="reply-right">
+          <button class="btn" onclick="saveDraft()">儲存草稿</button>
+          <button class="btn btn-primary" onclick="sendReply()" id="send-btn">發送</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: sidebar -->
+  <div class="detail-sidebar">
+    <div class="sidebar-section">
+      <h3>客戶</h3>
+      <p><strong>{{ ticket.customer.name or '—' }}</strong></p>
+      <p class="text-muted">{{ ticket.customer.email }}</p>
+      <a href="/tickets/customers/{{ ticket.customer.id }}" class="btn-link">查看歷史 Ticket</a>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>指派</h3>
+      <select id="assign-agent" onchange="assignTicket(this.value)">
+        <option value="">未指派</option>
+        {% for a in all_agents %}
+        <option value="{{ a.id }}" {% if ticket.assigned_agent_id == a.id %}selected{% endif %}>{{ a.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>狀態 / 優先級</h3>
+      <select onchange="updateStatus(this.value)">
+        {% for s, l in status_labels.items() %}
+        <option value="{{ s }}" {% if ticket.status == s %}selected{% endif %}>{{ l }}</option>
+        {% endfor %}
+      </select>
+      <select onchange="updatePriority(this.value)" style="margin-top:8px">
+        {% for p, l in priority_labels.items() %}
+        <option value="{{ p }}" {% if ticket.priority == p %}selected{% endif %}>{{ l }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>標籤</h3>
+      <div class="tag-checkboxes">
+        {% for tag in all_tags %}
+        <label class="tag-check-label">
+          <input type="checkbox" class="tag-cb" value="{{ tag.id }}" {% if tag.id in ticket_tag_ids %}checked{% endif %} onchange="saveTags()">
+          <span class="tag" style="background:{{ tag.color }}22;color:{{ tag.color }}">{{ tag.name }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>合併 Ticket</h3>
+      <input type="number" id="merge-target" placeholder="目標 Ticket 編號">
+      <button class="btn btn-sm btn-danger" onclick="mergeTicket()" style="margin-top:6px">合併</button>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>活動記錄</h3>
+      <div class="activity-log">
+        {% for act in ticket.activity | reverse %}
+        <div class="activity-item">
+          <span class="activity-action">{{ act.action }}</span>
+          {% if act.old_value and act.new_value %}
+          <span class="activity-change">{{ act.old_value }} → {{ act.new_value }}</span>
+          {% endif %}
+          <span class="activity-time">{{ act.created_at.strftime('%m/%d %H:%M') }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const TICKET_ID = {{ ticket.id }};
+const TICKET_EMAIL = "{{ ticket.customer.email }}";
+let isInternal = false;
+let draftTimer = null;
+let currentTemplateId = null;
+
+// Load existing draft on page load
+(async () => {
+  const r = await fetch(`/tickets/api/tickets/${TICKET_ID}/draft`);
+  const d = await r.json();
+  if (d.draft) {
+    document.getElementById('reply-body').value = d.draft.body_html || '';
+    document.getElementById('draft-notice').style.display = 'flex';
+    currentTemplateId = d.draft.template_id;
+  }
+})();
+
+// Collision detection
+setInterval(async () => {
+  await fetch(`/tickets/api/tickets/${TICKET_ID}/presence`, {method:'POST'});
+  const r = await fetch(`/tickets/api/tickets/${TICKET_ID}/presence`);
+  const d = await r.json();
+  const banner = document.getElementById('collision-banner');
+  if (d.viewers && d.viewers.length > 0) {
+    banner.textContent = '👁 ' + d.viewers.map(v => v.agent_name).join('、') + ' 也在查看此 Ticket';
+    banner.style.display = 'block';
+  } else {
+    banner.style.display = 'none';
+  }
+}, 20000);
+// Initial heartbeat
+fetch(`/tickets/api/tickets/${TICKET_ID}/presence`, {method:'POST'});
+
+function setReplyMode(mode, btn) {
+  isInternal = mode === 'internal';
+  document.querySelectorAll('.reply-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('reply-recipients').style.display = isInternal ? 'none' : '';
+  document.getElementById('reply-box').classList.toggle('internal-mode', isInternal);
+}
+
+function scheduleDraftSave() {
+  clearTimeout(draftTimer);
+  draftTimer = setTimeout(saveDraft, 3000);
+}
+
+async function saveDraft() {
+  const body = document.getElementById('reply-body').value;
+  if (!body.trim()) return;
+  await fetch(`/tickets/api/tickets/${TICKET_ID}/draft`, {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({
+      body_html: body, is_internal: isInternal,
+      to_addrs: [document.getElementById('reply-to')?.value || TICKET_EMAIL],
+      cc_addrs: document.getElementById('reply-cc')?.value ? [document.getElementById('reply-cc').value] : [],
+      template_id: currentTemplateId,
+    })
+  });
+  document.getElementById('draft-notice').style.display = 'flex';
+}
+
+async function discardDraft() {
+  await fetch(`/tickets/api/tickets/${TICKET_ID}/draft`, {method:'DELETE'});
+  document.getElementById('reply-body').value = '';
+  document.getElementById('draft-notice').style.display = 'none';
+  currentTemplateId = null;
+}
+
+async function sendReply() {
+  const body = document.getElementById('reply-body').value.trim();
+  if (!body) return;
+  document.getElementById('send-btn').disabled = true;
+  const res = await fetch(`/tickets/api/tickets/${TICKET_ID}/send`, {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({
+      body_html: body, is_internal: isInternal,
+      to_addrs: [document.getElementById('reply-to')?.value || TICKET_EMAIL],
+      cc_addrs: document.getElementById('reply-cc')?.value ? [document.getElementById('reply-cc').value] : [],
+      bcc_addrs: document.getElementById('reply-bcc')?.value ? [document.getElementById('reply-bcc').value] : [],
+      new_status: document.getElementById('reply-status').value,
+      template_id: currentTemplateId,
+    })
+  });
+  if (res.ok) window.location.reload();
+  else { alert('發送失敗'); document.getElementById('send-btn').disabled = false; }
+}
+
+async function assignTicket(agentId) {
+  await fetch(`/tickets/api/tickets/${TICKET_ID}/assign`, {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({agent_id: agentId ? parseInt(agentId) : null})
+  });
+}
+
+async function updateStatus(status) {
+  await fetch(`/tickets/api/tickets/${TICKET_ID}/status`, {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({status})
+  });
+}
+
+async function updatePriority(priority) {
+  await fetch(`/tickets/api/tickets/${TICKET_ID}/priority`, {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({priority})
+  });
+}
+
+async function saveTags() {
+  const ids = Array.from(document.querySelectorAll('.tag-cb:checked')).map(c => parseInt(c.value));
+  await fetch(`/tickets/api/tickets/${TICKET_ID}/tags`, {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({tag_ids: ids})
+  });
+}
+
+async function mergeTicket() {
+  const targetNum = document.getElementById('merge-target').value;
+  if (!targetNum || !confirm(`確定要將此 Ticket 合併到 #${targetNum}？此操作無法還原`)) return;
+  await fetch(`/tickets/api/tickets/${TICKET_ID}/merge`, {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({target_ticket_id: parseInt(targetNum)})
+  });
+  window.location.href = '/tickets/inbox';
+}
+
+let tplSearchTimer;
+async function searchTemplates(q) {
+  clearTimeout(tplSearchTimer);
+  if (!q) { document.getElementById('template-suggestions').style.display = 'none'; return; }
+  tplSearchTimer = setTimeout(async () => {
+    const r = await fetch(`/tickets/api/templates/search?q=${encodeURIComponent(q)}`);
+    const results = await r.json();
+    const box = document.getElementById('template-suggestions');
+    if (!results.length) { box.style.display = 'none'; return; }
+    box.innerHTML = results.map(t =>
+      `<div class="tpl-suggestion" onclick="applyTemplate(${t.id},'${escHtml(t.name)}')">
+        <span class="tpl-name">${t.name}</span>
+        ${t.category ? `<span class="tpl-cat">${t.category}</span>` : ''}
+      </div>`
+    ).join('');
+    box.style.display = 'block';
+  }, 200);
+}
+
+async function applyTemplate(id, name) {
+  document.getElementById('template-suggestions').style.display = 'none';
+  document.getElementById('template-search').value = name;
+  const r = await fetch(`/tickets/api/templates/${id}/render`, {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ticket_id: TICKET_ID})
+  });
+  const d = await r.json();
+  document.getElementById('reply-body').value = d.body_html;
+  currentTemplateId = id;
+}
+
+async function generateAIDraft() {
+  const btn = document.querySelector('.btn-ai');
+  btn.textContent = '生成中…';
+  btn.disabled = true;
+  try {
+    const es = new EventSource(`/tickets/api/tickets/${TICKET_ID}/ai-draft`);
+    let text = '';
+    document.getElementById('reply-body').value = '';
+    es.onmessage = e => { text += e.data; document.getElementById('reply-body').value = text; };
+    es.onerror = () => { es.close(); btn.textContent = '✦ AI 草稿'; btn.disabled = false; };
+  } catch(e) { btn.textContent = '✦ AI 草稿'; btn.disabled = false; }
+}
+
+function insertFAQLink() {
+  const q = prompt('搜尋 FAQ 關鍵字：');
+  if (q) window.open(`/search?q=${encodeURIComponent(q)}`, '_blank');
+}
+
+function toggleCC() { const r = document.getElementById('cc-row'); r.style.display = r.style.display === 'none' ? '' : 'none'; }
+function toggleBCC() { const r = document.getElementById('bcc-row'); r.style.display = r.style.display === 'none' ? '' : 'none'; }
+function wrapText(before, after) {
+  const ta = document.getElementById('reply-body');
+  const s = ta.selectionStart, e = ta.selectionEnd;
+  const val = ta.value;
+  ta.value = val.slice(0,s) + before + val.slice(s,e) + after + val.slice(e);
+}
+function insertText(text) {
+  const ta = document.getElementById('reply-body');
+  const s = ta.selectionStart;
+  ta.value = ta.value.slice(0,s) + text + ta.value.slice(s);
+}
+function escHtml(s) { return s.replace(/'/g, "\\'"); }
+</script>
+{% endblock %}

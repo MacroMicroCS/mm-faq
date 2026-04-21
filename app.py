@@ -21,6 +21,9 @@ INDEX_PATH = BASE_DIR / "index.json"
 app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
+from tickets import ticket_app
+app.mount("/tickets", ticket_app)
+
 LOCALE_NAMES = {"zh-tw": "繁體中文", "zh-cn": "简体中文", "en": "English"}
 
 
