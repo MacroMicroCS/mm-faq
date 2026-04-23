@@ -133,6 +133,8 @@ class Ticket(Base):
     source_account_id: Mapped[int | None] = mapped_column(Integer, ForeignKey("email_accounts.id"), nullable=True)
     # Merge support
     merged_into_id: Mapped[int | None] = mapped_column(Integer, ForeignKey("tickets.id"), nullable=True)
+    # Zendesk migration
+    zendesk_id: Mapped[int | None] = mapped_column(Integer, unique=True, nullable=True, index=True)
     # Email threading
     email_message_id: Mapped[str | None] = mapped_column(String(500), nullable=True, index=True)
     email_thread_id: Mapped[str | None] = mapped_column(String(500), nullable=True, index=True)

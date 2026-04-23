@@ -1,0 +1,48 @@
+{% extends "tickets/base.html" %}
+{% block title %}客戶{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>客戶 <span class="count-badge">{{ total }}</span></h1>
+</div>
+<div class="search-bar">
+    <form method="get">
+        <input type="text" name="q" value="{{ q }}" placeholder="搜尋 Email 或姓名…" autofocus>
+        <button type="submit" class="btn">搜尋</button>
+    </form>
+</div>
+<div style="padding: 0 28px; overflow-x: auto;">
+    <table class="ticket-table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>姓名</th>
+                <th>Tickets</th>
+                <th>語系</th>
+                <th>建立時間</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in customers %}
+            <tr>
+                <td>{{ c.email }}</td>
+                <td>{{ c.name or '—' }}</td>
+                <td>{{ counts.get(c.id, 0) }}</td>
+                <td>{{ c.locale }}</td>
+                <td class="col-time">{{ c.created_at.strftime('%Y/%m/%d') }}</td>
+                <td><a href="/tickets/customers/{{ c.id }}" class="btn btn-sm">查看</a></td>
+            </tr>
+            {% else %}
+            <tr><td colspan="6" class="empty-state">尚無客戶資料</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% if total_pages > 1 %}
+<div class="pagination">
+    {% if page > 1 %}<a href="?q={{ q }}&page={{ page-1 }}" class="btn btn-sm">上一頁</a>{% endif %}
+    <span>第 {{ page }} / {{ total_pages }} 頁</span>
+    {% if page < total_pages %}<a href="?q={{ q }}&page={{ page+1 }}" class="btn btn-sm">下一頁</a>{% endif %}
+</div>
+{% endif %}
+{% endblock %}

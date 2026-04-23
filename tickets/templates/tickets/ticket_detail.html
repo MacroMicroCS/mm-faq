@@ -92,6 +92,16 @@
 
       <textarea id="reply-body" rows="8" placeholder="輸入回覆內容…" oninput="scheduleDraftSave()"></textarea>
 
+      <!-- Attachments -->
+      <div class="attachment-section">
+        <div class="attachment-upload">
+          <input type="file" id="attachment-input" multiple onchange="handleAttachmentSelect()" style="display:none">
+          <button class="btn btn-sm" onclick="document.getElementById('attachment-input').click()">📎 新增附件</button>
+          <span class="attachment-note">（最大 10MB）</span>
+        </div>
+        <div id="pending-attachments" class="pending-attachments"></div>
+      </div>
+
       <div class="reply-actions">
         <div class="reply-left">
           <select id="reply-status" title="發送後狀態">
@@ -234,6 +244,7 @@ async function saveDraft() {
       body_html: body, is_internal: isInternal,
       to_addrs: [document.getElementById('reply-to')?.value || TICKET_EMAIL],
       cc_addrs: document.getElementById('reply-cc')?.value ? [document.getElementById('reply-cc').value] : [],
+      attachment_ids: pendingAttachments.map(a => a.id),
       template_id: currentTemplateId,
     })
   });
@@ -258,6 +269,7 @@ async function sendReply() {
       to_addrs: [document.getElementById('reply-to')?.value || TICKET_EMAIL],
       cc_addrs: document.getElementById('reply-cc')?.value ? [document.getElementById('reply-cc').value] : [],
       bcc_addrs: document.getElementById('reply-bcc')?.value ? [document.getElementById('reply-bcc').value] : [],
+      attachment_ids: pendingAttachments.map(a => a.id),
       new_status: document.getElementById('reply-status').value,
       template_id: currentTemplateId,
     })
@@ -368,5 +380,38 @@ function insertText(text) {
   ta.value = ta.value.slice(0,s) + text + ta.value.slice(s);
 }
 function escHtml(s) { return s.replace(/'/g, "\\'"); }
+
+let pendingAttachments = [];
+async function handleAttachmentSelect() {
+  const input = document.getElementById('attachment-input');
+  const files = Array.from(input.files);
+  for (const file of files) {
+    if (file.size > 10 * 1024 * 1024) { alert(`${file.name} 超過 10MB 限制`); continue; }
+    const formData = new FormData();
+    formData.append('file', file);
+    try {
+      const r = await fetch('/tickets/api/upload/attachment', {method:'POST', body: formData});
+      const d = await r.json();
+      pendingAttachments.push({id: d.id, filename: d.filename});
+      renderAttachments();
+    } catch(e) { alert(`${file.name} 上傳失敗`); }
+  }
+  input.value = '';
+}
+
+function renderAttachments() {
+  const box = document.getElementById('pending-attachments');
+  box.innerHTML = pendingAttachments.map((att, idx) =>
+    `<div class="pending-attachment-item">
+      <span>📎 ${att.filename}</span>
+      <button class="btn-link" onclick="removePendingAttachment(${idx})">✕</button>
+    </div>`
+  ).join('');
+}
+
+function removePendingAttachment(idx) {
+  pendingAttachments.splice(idx, 1);
+  renderAttachments();
+}
 </script>
 {% endblock %}

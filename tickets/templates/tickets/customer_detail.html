@@ -1,0 +1,64 @@
+{% extends "tickets/base.html" %}
+{% block title %}{{ customer.name or customer.email }}{% endblock %}
+{% block content %}
+<div class="page-header">
+    <a href="/tickets/customers" class="back-link">← 客戶列表</a>
+    <h1>{{ customer.name or customer.email }}</h1>
+</div>
+<div class="customer-layout">
+    <div class="customer-info-panel">
+        <div class="sidebar-section">
+            <h3>基本資料</h3>
+            <p><strong>Email：</strong>{{ customer.email }}</p>
+            <p><strong>姓名：</strong>{{ customer.name or '—' }}</p>
+            <p><strong>語系：</strong>{{ customer.locale }}</p>
+            <p><strong>建立時間：</strong>{{ customer.created_at.strftime('%Y/%m/%d') }}</p>
+        </div>
+        <div class="sidebar-section">
+            <h3>客服備註</h3>
+            <textarea id="customer-notes" rows="6" style="width:100%;box-sizing:border-box;padding:8px;border:1px solid #e0e0e0;border-radius:6px;font-family:inherit;font-size:0.88rem;" oninput="scheduleNoteSave()">{{ customer.notes or '' }}</textarea>
+            <p class="text-muted" id="note-saved" style="display:none;margin-top:4px">已儲存 ✓</p>
+        </div>
+    </div>
+    <div class="customer-tickets-panel">
+        <h2>Ticket 記錄（{{ tickets | length }}）</h2>
+        <table class="ticket-table">
+            <thead>
+                <tr><th>編號</th><th>主旨</th><th>狀態</th><th>建立時間</th></tr>
+            </thead>
+            <tbody>
+                {% for t in tickets %}
+                <tr>
+                    <td><a href="/tickets/{{ t.id }}" style="color:var(--mm-blue,#199b7e);font-weight:600">#{{ t.number }}</a></td>
+                    <td><a href="/tickets/{{ t.id }}" style="color:#1a1a2e;text-decoration:none">{{ t.subject }}</a></td>
+                    <td><span class="status-badge status-{{ t.status }}">{{ t.status }}</span></td>
+                    <td class="col-time">{{ t.created_at.strftime('%Y/%m/%d') }}</td>
+                </tr>
+                {% else %}
+                <tr><td colspan="4" class="empty-state">尚無 Ticket</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const CUSTOMER_ID = {{ customer.id }};
+let noteTimer;
+function scheduleNoteSave() {
+    clearTimeout(noteTimer);
+    noteTimer = setTimeout(saveNotes, 1500);
+}
+async function saveNotes() {
+    const notes = document.getElementById('customer-notes').value;
+    await fetch(`/tickets/api/customers/${CUSTOMER_ID}/notes`, {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({notes})
+    });
+    const el = document.getElementById('note-saved');
+    el.style.display = 'block';
+    setTimeout(() => el.style.display = 'none', 2000);
+}
+</script>
+{% endblock %}

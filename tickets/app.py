@@ -41,12 +41,15 @@ ticket_app.mount(
 )
 
 # Register routers
-from tickets.routers import auth, messages, templates as tpl_router, tickets
+from tickets.routers import auth, customers, messages, settings, templates as tpl_router, tickets, uploads
 
 ticket_app.include_router(auth.router)
 ticket_app.include_router(tickets.router)
 ticket_app.include_router(messages.router)
 ticket_app.include_router(tpl_router.router)
+ticket_app.include_router(customers.router)
+ticket_app.include_router(settings.router)
+ticket_app.include_router(uploads.router)
 
 
 # Redirect /tickets/ → /tickets/inbox

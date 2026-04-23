@@ -1,0 +1,233 @@
+{% extends "tickets/base.html" %}
+{% block title %}系統設定{% endblock %}
+{% block content %}
+<div class="page-header"><h1>系統設定</h1></div>
+
+{% if not encryption_key_set %}
+<div class="alert alert-error" style="margin:0 28px 16px">
+    ⚠️ 環境變數 <code>TICKET_ENCRYPTION_KEY</code> 未設定，Email 帳號功能無法使用。
+    請執行 <code>python3 scripts/create_agent.py</code> 產生 key。
+</div>
+{% endif %}
+
+<!-- ── Email 帳號 ───────────────────────── -->
+<div class="settings-section">
+    <div class="settings-section-header">
+        <h2>Email 收信帳號</h2>
+        <button class="btn btn-primary btn-sm" onclick="openModal('email-modal')">＋ 新增帳號</button>
+    </div>
+    <table class="ticket-table">
+        <thead><tr><th>名稱</th><th>IMAP</th><th>SMTP</th><th>狀態</th><th>操作</th></tr></thead>
+        <tbody>
+            {% for acc in accounts %}
+            <tr>
+                <td>{{ acc.label }}</td>
+                <td>{{ acc.imap_host }}:{{ acc.imap_port }}<br><small>{{ acc.imap_user }}</small></td>
+                <td>{{ acc.smtp_host }}:{{ acc.smtp_port }}</td>
+                <td><span class="status-badge {{ 'status-open' if acc.is_active else 'status-closed' }}">{{ '啟用' if acc.is_active else '停用' }}</span></td>
+                <td>
+                    <button class="btn btn-sm" onclick="testAccount({{ acc.id }})">測試連線</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteAccount({{ acc.id }})">刪除</button>
+                </td>
+            </tr>
+            {% else %}
+            <tr><td colspan="5" class="empty-state">尚未設定 Email 帳號</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="settings-note">
+        <strong>Gmail / Google Workspace 注意事項：</strong>
+        IMAP: <code>imap.gmail.com:993</code> / SMTP: <code>smtp.gmail.com:587</code><br>
+        密碼請使用 <strong>應用程式密碼（App Password）</strong>，不是 Gmail 登入密碼。<br>
+        設定方式：Google 帳戶 → 安全性 → 兩步驟驗證 → 應用程式密碼
+    </div>
+</div>
+
+<!-- ── 客服人員 ────────────────────────── -->
+<div class="settings-section">
+    <div class="settings-section-header">
+        <h2>客服人員</h2>
+        <button class="btn btn-primary btn-sm" onclick="openModal('agent-modal')">＋ 新增客服</button>
+    </div>
+    <table class="ticket-table">
+        <thead><tr><th>姓名</th><th>Email</th><th>角色</th><th>狀態</th><th>操作</th></tr></thead>
+        <tbody>
+            {% for a in agents %}
+            <tr>
+                <td>{{ a.name }}</td>
+                <td>{{ a.email }}</td>
+                <td>{{ '管理員' if a.role == 'admin' else '客服' }}</td>
+                <td><span class="status-badge {{ 'status-open' if a.is_active else 'status-closed' }}">{{ '啟用' if a.is_active else '停用' }}</span></td>
+                <td>
+                    <button class="btn btn-sm" onclick="toggleAgent({{ a.id }}, {{ 'false' if a.is_active else 'true' }})">
+                        {{ '停用' if a.is_active else '啟用' }}
+                    </button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- ── 標籤管理 ───────────────────────── -->
+<div class="settings-section">
+    <div class="settings-section-header">
+        <h2>標籤</h2>
+        <div style="display:flex;gap:8px;align-items:center">
+            <input type="text" id="new-tag-name" placeholder="標籤名稱">
+            <input type="color" id="new-tag-color" value="#50e3c2" style="width:36px;height:34px;border:1px solid #e0e0e0;border-radius:4px;cursor:pointer">
+            <button class="btn btn-primary btn-sm" onclick="createTag()">新增</button>
+        </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;padding:0 0 8px">
+        {% for tag in tags %}
+        <span class="tag" style="background:{{ tag.color }}22;color:{{ tag.color }};padding:5px 12px;font-size:0.9rem">
+            {{ tag.name }}
+            <button onclick="deleteTag({{ tag.id }})" style="background:none;border:none;cursor:pointer;color:inherit;margin-left:4px;font-size:0.85rem">✕</button>
+        </span>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- ── 群組 ──────────────────────────── -->
+<div class="settings-section">
+    <div class="settings-section-header">
+        <h2>群組</h2>
+        <div style="display:flex;gap:8px">
+            <input type="text" id="new-team-name" placeholder="群組名稱">
+            <button class="btn btn-primary btn-sm" onclick="createTeam()">新增</button>
+        </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;padding:0 0 8px">
+        {% for team in teams %}
+        <span style="background:#f5f5f5;padding:5px 12px;border-radius:8px;font-size:0.9rem">{{ team.name }}</span>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- ── Email 帳號 Modal ───────────────── -->
+<div class="modal" id="email-modal" style="display:none">
+    <div class="modal-box" style="min-width:480px">
+        <h2>新增 Email 帳號</h2>
+        <div class="form-row">
+            <div class="form-group"><label>名稱</label><input type="text" id="em-label" placeholder="Support"></div>
+        </div>
+        <div class="form-row">
+            <div class="form-group"><label>IMAP 主機</label><input type="text" id="em-imap-host" placeholder="imap.gmail.com"></div>
+            <div class="form-group" style="max-width:90px"><label>Port</label><input type="number" id="em-imap-port" value="993"></div>
+        </div>
+        <div class="form-group"><label>IMAP 帳號</label><input type="email" id="em-imap-user" placeholder="support@macromicro.me"></div>
+        <div class="form-group"><label>IMAP 密碼（App Password）</label><input type="password" id="em-imap-pass"></div>
+        <div class="form-row">
+            <div class="form-group"><label>SMTP 主機</label><input type="text" id="em-smtp-host" placeholder="smtp.gmail.com"></div>
+            <div class="form-group" style="max-width:90px"><label>Port</label><input type="number" id="em-smtp-port" value="587"></div>
+        </div>
+        <div class="form-group"><label>SMTP 帳號</label><input type="email" id="em-smtp-user" placeholder="support@macromicro.me"></div>
+        <div class="form-group"><label>SMTP 密碼（App Password）</label><input type="password" id="em-smtp-pass"></div>
+        <div class="modal-actions">
+            <button class="btn" onclick="document.getElementById('email-modal').style.display='none'">取消</button>
+            <button class="btn btn-primary" onclick="saveEmailAccount()">儲存</button>
+        </div>
+    </div>
+</div>
+
+<!-- ── Agent Modal ───────────────────── -->
+<div class="modal" id="agent-modal" style="display:none">
+    <div class="modal-box">
+        <h2>新增客服人員</h2>
+        <div class="form-group"><label>姓名</label><input type="text" id="ag-name"></div>
+        <div class="form-group"><label>Email</label><input type="email" id="ag-email"></div>
+        <div class="form-group"><label>密碼</label><input type="password" id="ag-pass"></div>
+        <div class="form-group">
+            <label>角色</label>
+            <select id="ag-role"><option value="agent">客服</option><option value="admin">管理員</option></select>
+        </div>
+        <div class="modal-actions">
+            <button class="btn" onclick="document.getElementById('agent-modal').style.display='none'">取消</button>
+            <button class="btn btn-primary" onclick="saveAgent()">建立</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+
+async function saveEmailAccount() {
+    const body = {
+        label: document.getElementById('em-label').value,
+        imap_host: document.getElementById('em-imap-host').value,
+        imap_port: parseInt(document.getElementById('em-imap-port').value),
+        imap_user: document.getElementById('em-imap-user').value,
+        imap_password: document.getElementById('em-imap-pass').value,
+        smtp_host: document.getElementById('em-smtp-host').value,
+        smtp_port: parseInt(document.getElementById('em-smtp-port').value),
+        smtp_user: document.getElementById('em-smtp-user').value,
+        smtp_password: document.getElementById('em-smtp-pass').value,
+    };
+    const r = await fetch('/tickets/api/settings/email-accounts', {
+        method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body)
+    });
+    if (r.ok) window.location.reload();
+    else { const d = await r.json(); alert(d.detail || '儲存失敗'); }
+}
+
+async function testAccount(id) {
+    const r = await fetch(`/tickets/api/settings/email-accounts/${id}/test`, {method:'POST'});
+    const d = await r.json();
+    alert(d.ok ? `✅ ${d.message}` : `❌ ${d.message}`);
+}
+
+async function deleteAccount(id) {
+    if (!confirm('確定刪除此 Email 帳號？')) return;
+    await fetch(`/tickets/api/settings/email-accounts/${id}`, {method:'DELETE'});
+    window.location.reload();
+}
+
+async function saveAgent() {
+    const body = {
+        name: document.getElementById('ag-name').value,
+        email: document.getElementById('ag-email').value,
+        password: document.getElementById('ag-pass').value,
+        role: document.getElementById('ag-role').value,
+    };
+    const r = await fetch('/tickets/api/settings/agents', {
+        method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)
+    });
+    if (r.ok) window.location.reload();
+    else { const d = await r.json(); alert(d.detail || '建立失敗'); }
+}
+
+async function toggleAgent(id, active) {
+    await fetch(`/tickets/api/settings/agents/${id}`, {
+        method:'PUT', headers:{'Content-Type':'application/json'}, body: JSON.stringify({is_active: active === 'true' || active === true})
+    });
+    window.location.reload();
+}
+
+async function createTag() {
+    const name = document.getElementById('new-tag-name').value.trim();
+    const color = document.getElementById('new-tag-color').value;
+    if (!name) return;
+    const r = await fetch('/tickets/api/settings/tags', {
+        method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({name, color})
+    });
+    if (r.ok) window.location.reload();
+}
+
+async function deleteTag(id) {
+    if (!confirm('確定刪除此標籤？')) return;
+    await fetch(`/tickets/api/settings/tags/${id}`, {method:'DELETE'});
+    window.location.reload();
+}
+
+async function createTeam() {
+    const name = document.getElementById('new-team-name').value.trim();
+    if (!name) return;
+    await fetch('/tickets/api/settings/teams', {
+        method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({name})
+    });
+    window.location.reload();
+}
+</script>
+{% endblock %}

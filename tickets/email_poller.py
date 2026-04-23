@@ -119,8 +119,8 @@ async def _process_email(msg: email.message.Message, account: EmailAccount, db: 
     # Find existing ticket via email threading (3-layer fallback)
     ticket = await _find_existing_ticket(in_reply_to, references, subject, customer, db)
 
-    if ticket is None:
-        # New ticket
+    new_ticket_created = ticket is None
+    if new_ticket_created:
         ticket = await _create_ticket(subject, customer, account, message_id, db)
 
     # Add message to ticket
@@ -155,6 +155,11 @@ async def _process_email(msg: email.message.Message, account: EmailAccount, db: 
         action="message_received",
         detail=json.dumps({"from": from_email, "message_id": message_id}),
     ))
+
+    # Auto-reply for new tickets only
+    if new_ticket_created:
+        from tickets.auto_reply import send_auto_reply
+        await send_auto_reply(ticket, customer, account, db)
 
 
 async def _get_or_create_customer(email_addr: str, name: str, db: AsyncSession) -> Customer:
