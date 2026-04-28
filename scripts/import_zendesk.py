@@ -1,5 +1,5 @@
 """
-Import Zendesk CSV exports into the FAQ Markdown system.
+Import Zendesk CSV/Excel exports into the FAQ Markdown system.
 
 Usage:
     python3 scripts/import_zendesk.py \
@@ -7,8 +7,14 @@ Usage:
         --sc zendesk_sc.csv \
         --en zendesk_en.csv
 
-The three CSV files must each have columns: id, Title, Body (tab-separated or comma-separated).
-Articles are matched across languages by their Zendesk article ID.
+    # Excel files also supported:
+    python3 scripts/import_zendesk.py \
+        --tc zendesk_tc.xlsx \
+        --sc zendesk_sc.xlsx \
+        --en zendesk_en.xlsx
+
+Each file must have columns: id, Title, Body.
+Articles are matched across languages by Zendesk article ID.
 All imported articles land in content/未分類/ with status=draft.
 Run from the faq/ directory.
 """
@@ -38,26 +44,62 @@ def detect_delimiter(path: str) -> str:
     return "\t" if tabs > commas else ","
 
 
+def normalise_id(raw_id) -> str:
+    """Convert scientific notation or float IDs to integer strings."""
+    try:
+        return str(int(float(str(raw_id).strip())))
+    except (ValueError, TypeError):
+        return str(raw_id).strip()
+
+
+def read_excel(path: str) -> dict:
+    """Return {article_id: {title, body}} from an Excel file."""
+    try:
+        import openpyxl
+    except ImportError:
+        print("Installing openpyxl…")
+        import subprocess
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl", "-q"])
+        import openpyxl
+
+    wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
+    ws = wb.active
+    rows = {}
+    headers = None
+    for row in ws.iter_rows(values_only=True):
+        if headers is None:
+            headers = [str(c).strip() if c else "" for c in row]
+            continue
+        data = dict(zip(headers, row))
+        raw_id = data.get("id", data.get("Id", data.get("ID", "")))
+        if not raw_id:
+            continue
+        article_id = normalise_id(raw_id)
+        title = str(data.get("Title", data.get("title", "")) or "").strip()
+        body = str(data.get("Body", data.get("body", "")) or "").strip()
+        rows[article_id] = {"title": title, "body": body}
+    wb.close()
+    return rows
+
+
 def read_csv(path: str) -> dict:
     """Return {article_id: {title, body}} from a Zendesk CSV export."""
     if not path:
         return {}
+    p = Path(path)
+    if p.suffix.lower() in (".xlsx", ".xls"):
+        return read_excel(path)
     delim = detect_delimiter(path)
     rows = {}
     with open(path, encoding="utf-8-sig", errors="replace", newline="") as f:
         reader = csv.DictReader(f, delimiter=delim)
         for row in reader:
-            # Zendesk exports use 'id', 'Title', 'Body' headers
             raw_id = row.get("id", row.get("Id", "")).strip()
             title = row.get("Title", row.get("title", "")).strip()
             body = row.get("Body", row.get("body", "")).strip()
             if not raw_id:
                 continue
-            # Normalise scientific notation IDs (e.g. 1.55683E+13 → 15568300000000)
-            try:
-                article_id = str(int(float(raw_id)))
-            except ValueError:
-                article_id = raw_id
+            article_id = normalise_id(raw_id)
             rows[article_id] = {"title": title, "body": body}
     return rows
 
