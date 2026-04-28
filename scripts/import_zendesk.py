@@ -52,8 +52,11 @@ def normalise_id(raw_id) -> str:
         return str(raw_id).strip()
 
 
-def read_excel(path: str) -> dict:
-    """Return {article_id: {title, body}} from an Excel file."""
+def read_excel(path: str, sheet: str = None) -> dict:
+    """Return {article_id: {title, body}} from an Excel file.
+
+    path may include a sheet name after a colon, e.g. "file.xlsx:zendesk_tc".
+    """
     try:
         import openpyxl
     except ImportError:
@@ -62,8 +65,19 @@ def read_excel(path: str) -> dict:
         subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl", "-q"])
         import openpyxl
 
+    # Support "filename.xlsx:SheetName" syntax
+    if ":" in path and not path.startswith("/"):
+        path, sheet = path.rsplit(":", 1)
+    elif ":" in Path(path).name:
+        name = Path(path).name
+        parent = str(Path(path).parent)
+        file_part, sheet = name.rsplit(":", 1)
+        path = str(Path(parent) / file_part)
+
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
-    ws = wb.active
+    ws = wb[sheet] if sheet and sheet in wb.sheetnames else wb.active
+    if sheet and sheet not in wb.sheetnames:
+        print(f"Warning: sheet '{sheet}' not found. Available: {wb.sheetnames}. Using active sheet.")
     rows = {}
     headers = None
     for row in ws.iter_rows(values_only=True):
@@ -83,11 +97,12 @@ def read_excel(path: str) -> dict:
 
 
 def read_csv(path: str) -> dict:
-    """Return {article_id: {title, body}} from a Zendesk CSV export."""
+    """Return {article_id: {title, body}} from a CSV or Excel file."""
     if not path:
         return {}
-    p = Path(path)
-    if p.suffix.lower() in (".xlsx", ".xls"):
+    # Detect Excel by extension (before any colon sheet suffix)
+    file_part = path.rsplit(":", 1)[0] if ":" in path else path
+    if Path(file_part).suffix.lower() in (".xlsx", ".xls"):
         return read_excel(path)
     delim = detect_delimiter(path)
     rows = {}
