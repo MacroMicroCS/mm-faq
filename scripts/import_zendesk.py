@@ -65,14 +65,12 @@ def read_excel(path: str, sheet: str = None) -> dict:
         subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl", "-q"])
         import openpyxl
 
-    # Support "filename.xlsx:SheetName" syntax
-    if ":" in path and not path.startswith("/"):
-        path, sheet = path.rsplit(":", 1)
-    elif ":" in Path(path).name:
-        name = Path(path).name
-        parent = str(Path(path).parent)
-        file_part, sheet = name.rsplit(":", 1)
-        path = str(Path(parent) / file_part)
+    # Support "filepath.xlsx:SheetName" — sheet name is always after the last colon
+    # but only if the last colon comes after the file extension
+    if ":" in path:
+        file_part, sheet_part = path.rsplit(":", 1)
+        if Path(file_part).suffix.lower() in (".xlsx", ".xls"):
+            path, sheet = file_part, sheet_part
 
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
     ws = wb[sheet] if sheet and sheet in wb.sheetnames else wb.active
