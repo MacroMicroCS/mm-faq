@@ -4,15 +4,15 @@
     "category": "新手入門",
     "section": "Podcast",
     "title": {
-      "zh-tw": "財經Ｍ平方有 Podcast 或 YouTube 嗎?",
+      "en": "Does MacroMicro have a Podcast or YouTube channel?",
       "zh-cn": "财经Ｍ平方有 Podcast 或 YouTube 吗？",
-      "en": "Does MacroMicro have a Podcast or YouTube channel?"
+      "zh-tw": "財經Ｍ平方有 Podcast 或 YouTube 嗎?"
     },
     "status": "draft",
     "locales": {
-      "zh-tw": true,
+      "en": true,
       "zh-cn": true,
-      "en": true
+      "zh-tw": true
     },
     "order": 1,
     "file": "新手入門/Podcast/001-財經Ｍ平方有-Podcast-或-YouTube-嗎.md"
@@ -1744,5 +1744,1967 @@
     },
     "order": 6,
     "file": "新手入門/開始使用-MacroMicro/097-有提供-App-下載嗎.md"
+  },
+  {
+    "id": "098",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How to use MM Business for team collaboration?",
+      "zh-cn": "如何使用MM Business进行团队协作？",
+      "zh-tw": "如何使用MM Business進行團隊協作？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 1,
+    "file": "未分類/Zendesk 匯入/098-如何使用MM-Business進行團隊協作.md"
+  },
+  {
+    "id": "099",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What file format are downloaded datasets in?",
+      "zh-cn": "数据下载的文件格式是什么？",
+      "zh-tw": "數據下載的檔案為何？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 2,
+    "file": "未分類/Zendesk 匯入/099-數據下載的檔案為何.md"
+  },
+  {
+    "id": "100",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How do I find my past data downloads?",
+      "zh-cn": "如何找到过去下载的数据？",
+      "zh-tw": "如何找到過去下載的數據？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 3,
+    "file": "未分類/Zendesk 匯入/100-如何找到過去下載的數據.md"
+  },
+  {
+    "id": "101",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Does re-downloading data count against my quota?",
+      "zh-cn": "重复下载数据会扣除下载额度吗？",
+      "zh-tw": "重複下載數據會扣除下載額度嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 4,
+    "file": "未分類/Zendesk 匯入/101-重複下載數據會扣除下載額度嗎.md"
+  },
+  {
+    "id": "102",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Why can't I download data?",
+      "zh-cn": "为什么数据无法下载？",
+      "zh-tw": "為什麼數據無法下載？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 5,
+    "file": "未分類/Zendesk 匯入/102-為什麼數據無法下載.md"
+  },
+  {
+    "id": "103",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What can I do if I've used up my monthly download quota?",
+      "zh-cn": "如果当月的下载额度使用完毕，该如何能够继续下载？",
+      "zh-tw": "如果當月的下載額度使用完畢，該如何能夠繼續下載？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 6,
+    "file": "未分類/Zendesk 匯入/103-如果當月的下載額度使用完畢-該如何能夠繼續下載.md"
+  },
+  {
+    "id": "104",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "",
+      "zh-tw": "Apple Podcast 如何調整集數排序？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": false,
+      "zh-tw": true
+    },
+    "order": 7,
+    "file": "未分類/Zendesk 匯入/104-Apple-Podcast-如何調整集數排序.md"
+  },
+  {
+    "id": "105",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I access a free trial of MacroMicro services?",
+      "zh-cn": "",
+      "zh-tw": "Can I access a free trial of MacroMicro services?"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": false,
+      "zh-tw": false
+    },
+    "order": 8,
+    "file": "未分類/Zendesk 匯入/105-Can-I-access-a-free-trial-of-MacroMicro-.md"
+  },
+  {
+    "id": "106",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "取消订阅后，会员期间收到的报告还能观看吗？",
+      "zh-tw": "取消訂閱後，會員期間收到的報告還能觀看嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 9,
+    "file": "未分類/Zendesk 匯入/106-取消訂閱後-會員期間收到的報告還能觀看嗎.md"
+  },
+  {
+    "id": "107",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I download the charts on MacroMicro?",
+      "zh-cn": "如何汇出图表图片？",
+      "zh-tw": "如何匯出數據圖片？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 10,
+    "file": "未分類/Zendesk 匯入/107-如何匯出數據圖片.md"
+  },
+  {
+    "id": "108",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "I didn't receive the verification email for merging accounts. What should I do?",
+      "zh-cn": "没收到合并帐号的验证信该怎么办？",
+      "zh-tw": "沒收到合併帳號的驗證信該怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 11,
+    "file": "未分類/Zendesk 匯入/108-沒收到合併帳號的驗證信該怎麼辦.md"
+  },
+  {
+    "id": "109",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How do I check if my accounts were merged successfully?",
+      "zh-cn": "如何确认帐号是否合并成功？",
+      "zh-tw": "如何確認帳號是否合併成功？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 12,
+    "file": "未分類/Zendesk 匯入/109-如何確認帳號是否合併成功.md"
+  },
+  {
+    "id": "110",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I merge my multiple registered accounts?",
+      "zh-cn": "怎么合并我在网站上注册的多个帐号？",
+      "zh-tw": "怎麼合併我在網站上註冊的多個帳號？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 13,
+    "file": "未分類/Zendesk 匯入/110-怎麼合併我在網站上註冊的多個帳號.md"
+  },
+  {
+    "id": "111",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How do I tell if a chart is from MacroMicro or a user?",
+      "zh-cn": "如何区分图表来源是来自官方还是用户？",
+      "zh-tw": "如何區分圖表來源是來自官方還是用戶？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 14,
+    "file": "未分類/Zendesk 匯入/111-如何區分圖表來源是來自官方還是用戶.md"
+  },
+  {
+    "id": "112",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I remove my credit card",
+      "zh-cn": "如何解除约定信用卡？",
+      "zh-tw": "如何解除約定信用卡？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 15,
+    "file": "未分類/Zendesk 匯入/112-如何解除約定信用卡.md"
+  },
+  {
+    "id": "113",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Why do the subscription plans show prices in USD, but the actual payment is charged in TWD?",
+      "zh-cn": "",
+      "zh-tw": "Why do the subscription plans show prices in USD, but the actual payment is charged in TWD?"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": false,
+      "zh-tw": false
+    },
+    "order": 16,
+    "file": "未分類/Zendesk 匯入/113-Why-do-the-subscription-plans-show-price.md"
+  },
+  {
+    "id": "114",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What are the \"Latest Value\" and \"Watermark\" features?",
+      "zh-cn": "「最新值」和「浮水印」是什么功能？",
+      "zh-tw": "「最新值」和「浮水印」是什麼功能？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 17,
+    "file": "未分類/Zendesk 匯入/114-最新值-和-浮水印-是什麼功能.md"
+  },
+  {
+    "id": "115",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How do I get permission to use MacroMicro's charts or articles?",
+      "zh-cn": "如何取得 M 平方图片与文章的授权？",
+      "zh-tw": "如何取得M平方圖片與文章的授權？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 18,
+    "file": "未分類/Zendesk 匯入/115-如何取得M平方圖片與文章的授權.md"
+  },
+  {
+    "id": "116",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Why does the account keep getting logged out frequently?",
+      "zh-cn": "为什么登录中的账号会被登出，经常需要重新登录？",
+      "zh-tw": "為什麼登入中的帳號一直被登出，經常要重新登入?"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 19,
+    "file": "未分類/Zendesk 匯入/116-為什麼登入中的帳號一直被登出-經常要重新登入.md"
+  },
+  {
+    "id": "117",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How to register for a MacroMicro account?",
+      "zh-cn": "如何注册成为财经Ｍ平方会员？",
+      "zh-tw": "如何註冊成為財經Ｍ平方會員？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 20,
+    "file": "未分類/Zendesk 匯入/117-如何註冊成為財經Ｍ平方會員.md"
+  },
+  {
+    "id": "118",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Website Overview: Macro",
+      "zh-cn": "网站单元介绍：宏观",
+      "zh-tw": "網站單元介紹：總經"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 21,
+    "file": "未分類/Zendesk 匯入/118-網站單元介紹-總經.md"
+  },
+  {
+    "id": "119",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Website Overview：Sector",
+      "zh-cn": "网站单元介绍：产业",
+      "zh-tw": "網站單元介紹：產業"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 22,
+    "file": "未分類/Zendesk 匯入/119-網站單元介紹-產業.md"
+  },
+  {
+    "id": "120",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Charts - Trader's Insight",
+      "zh-cn": "网站单元介绍：图表 - 操盘人必看",
+      "zh-tw": "網站單元介紹：圖表 - 操盤人必看"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 23,
+    "file": "未分類/Zendesk 匯入/120-網站單元介紹-圖表-操盤人必看.md"
+  },
+  {
+    "id": "121",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Website Overview：ETF、Central Bank、Form 13F Fillings...",
+      "zh-cn": "网站单元介绍：ETF专区、央行专区、13F机构持仓...",
+      "zh-tw": "網站單元介紹：ETF專區、央行專區、13F機構持倉..."
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 24,
+    "file": "未分類/Zendesk 匯入/121-網站單元介紹-ETF專區-央行專區-13F機構持倉.md"
+  },
+  {
+    "id": "122",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Website Overview：Markets（Forex, Stock, ETFs, Bonds...）",
+      "zh-cn": "网站单元介绍：行情观测站（外汇、债券、加密货币、波动率）",
+      "zh-tw": "網站單元介紹：行情觀測站（外匯、債券、加密貨幣、波動率）"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 25,
+    "file": "未分類/Zendesk 匯入/122-網站單元介紹-行情觀測站-外匯-債券-加密貨幣-波動率.md"
+  },
+  {
+    "id": "123",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Webside Overview：Analysis（MM Daily、Spotlight、Blog、WEFC）",
+      "zh-cn": "网站单元介绍：分析（独家报告、短评、 关键图表、博客）",
+      "zh-tw": "網站單元介紹：分析（獨家報告、短評、關鍵圖表、部落格）"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 26,
+    "file": "未分類/Zendesk 匯入/123-網站單元介紹-分析-獨家報告-短評-關鍵圖表-部落格.md"
+  },
+  {
+    "id": "124",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Subscription Plans for Individuals：MM Prime、MM Max",
+      "zh-cn": "订阅方案介绍 - MM PRO、MM Prime、MM Max",
+      "zh-tw": "個人訂閱方案介紹 - MM PRO、MM Prime、MM Max"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 27,
+    "file": "未分類/Zendesk 匯入/124-個人訂閱方案介紹-MM-PRO-MM-Prime-MM-Max.md"
+  },
+  {
+    "id": "125",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Subscription Plans for Enterprise：MM Business、API Essential、 D&B GlobalView",
+      "zh-cn": "企业方案介绍：MM Business、API Essential、  D&B GlobalView",
+      "zh-tw": "企業方案介紹 - MM Business、API Essential、 D&B GlobalView"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 28,
+    "file": "未分類/Zendesk 匯入/125-企業方案介紹-MM-Business-API-Essential-D-B-Glo.md"
+  },
+  {
+    "id": "126",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Where is the member menu? How to access it?",
+      "zh-cn": "会员选单在哪里？如何进入",
+      "zh-tw": "會員選單在哪裡？如何進入？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 29,
+    "file": "未分類/Zendesk 匯入/126-會員選單在哪裡-如何進入.md"
+  },
+  {
+    "id": "127",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Member Menu Overview",
+      "zh-cn": "会员选单功能有哪些",
+      "zh-tw": "會員選單功能有哪些"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 30,
+    "file": "未分類/Zendesk 匯入/127-會員選單功能有哪些.md"
+  },
+  {
+    "id": "128",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "MM 宏观经济线上学院是什么",
+      "zh-tw": "MM 總經線上學院是什麼"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 31,
+    "file": "未分類/Zendesk 匯入/128-MM-總經線上學院是什麼.md"
+  },
+  {
+    "id": "129",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "如何收藏图表、图组？收藏后去哪里找",
+      "zh-tw": "如何收藏圖表、圖組？收藏後去哪裡找"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 32,
+    "file": "未分類/Zendesk 匯入/129-如何收藏圖表-圖組-收藏後去哪裡找.md"
+  },
+  {
+    "id": "130",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I sign up for an account?",
+      "zh-cn": "目前提供哪些方式註册？",
+      "zh-tw": "目前提供哪些方式註冊？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 33,
+    "file": "未分類/Zendesk 匯入/130-目前提供哪些方式註冊.md"
+  },
+  {
+    "id": "131",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What benefits do I enjoy when I sign up as a free member?",
+      "zh-cn": "註册成一般会员能享有哪些权益？",
+      "zh-tw": "註冊成一般會員能享有哪些權益？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 34,
+    "file": "未分類/Zendesk 匯入/131-註冊成一般會員能享有哪些權益.md"
+  },
+  {
+    "id": "132",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What login methods are available for one account?",
+      "zh-cn": "一个帐号有哪些登入方式？",
+      "zh-tw": "一個帳號可以有幾種登入方式？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 35,
+    "file": "未分類/Zendesk 匯入/132-一個帳號可以有幾種登入方式.md"
+  },
+  {
+    "id": "133",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "I didn't get an account activation email after signing up. What should I do?",
+      "zh-cn": "註册后没收到帐号启用信该怎麽办？",
+      "zh-tw": "註冊後沒收到帳號啟用信該怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 36,
+    "file": "未分類/Zendesk 匯入/133-註冊後沒收到帳號啟用信該怎麼辦.md"
+  },
+  {
+    "id": "134",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I log into my account from multiple devices?",
+      "zh-cn": "注册帐号后，登入使用是否有装置或IP限制？",
+      "zh-tw": "註冊帳號後，登入使用是否有裝置或 IP 限制？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 37,
+    "file": "未分類/Zendesk 匯入/134-註冊帳號後-登入使用是否有裝置或-IP-限制.md"
+  },
+  {
+    "id": "135",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What if I forget my account or password?",
+      "zh-cn": "忘记帐号或密码该怎麽办？",
+      "zh-tw": "忘記帳號或密碼該怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 38,
+    "file": "未分類/Zendesk 匯入/135-忘記帳號或密碼該怎麼辦.md"
+  },
+  {
+    "id": "136",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How do I change my password?",
+      "zh-cn": "如何更改密码？",
+      "zh-tw": "如何更改密碼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 39,
+    "file": "未分類/Zendesk 匯入/136-如何更改密碼.md"
+  },
+  {
+    "id": "137",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I delete my account?",
+      "zh-cn": "如何删除帐号？",
+      "zh-tw": "如何刪除帳號？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 40,
+    "file": "未分類/Zendesk 匯入/137-如何刪除帳號.md"
+  },
+  {
+    "id": "138",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I change the email address for account login?",
+      "zh-cn": "如何更改 Email 帐号的登入信箱？",
+      "zh-tw": "如何更改 Email 帳號的登入信箱？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 41,
+    "file": "未分類/Zendesk 匯入/138-如何更改-Email-帳號的登入信箱.md"
+  },
+  {
+    "id": "139",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How do I edit my profile?",
+      "zh-cn": "如何修改个人资料？",
+      "zh-tw": "如何修改個人資料？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 42,
+    "file": "未分類/Zendesk 匯入/139-如何修改個人資料.md"
+  },
+  {
+    "id": "140",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How to get the latest updates from MacroMicro?",
+      "zh-cn": "如何获得最新资讯？",
+      "zh-tw": "如何獲得最新資訊？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 43,
+    "file": "未分類/Zendesk 匯入/140-如何獲得最新資訊.md"
+  },
+  {
+    "id": "141",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I change the language of the newsletters and emails I receive?",
+      "zh-cn": "如何变更电子报信件的语系？",
+      "zh-tw": "如何變更電子報信件的語系？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 44,
+    "file": "未分類/Zendesk 匯入/141-如何變更電子報信件的語系.md"
+  },
+  {
+    "id": "142",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What benefits are included with a subscription?",
+      "zh-cn": "成为订阅会员能享有哪些权益？",
+      "zh-tw": "成為訂閱會員能享有哪些權益？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 45,
+    "file": "未分類/Zendesk 匯入/142-成為訂閱會員能享有哪些權益.md"
+  },
+  {
+    "id": "143",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I update the email I receive newsletters and notifications from MacroMicro?",
+      "zh-cn": "如何更改電子報收件信箱？",
+      "zh-tw": "如何更改電子報收件信箱？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 46,
+    "file": "未分類/Zendesk 匯入/143-如何更改電子報收件信箱.md"
+  },
+  {
+    "id": "144",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I cancel my newsletter subscription?",
+      "zh-cn": "如何取消电子报信件？",
+      "zh-tw": "如何取消電子報信件？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 47,
+    "file": "未分類/Zendesk 匯入/144-如何取消電子報信件.md"
+  },
+  {
+    "id": "145",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What is the Lifetime Subscription Offer?",
+      "zh-cn": "终身订阅优惠是什么？",
+      "zh-tw": "終身訂閱優惠是什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 48,
+    "file": "未分類/Zendesk 匯入/145-終身訂閱優惠是什麼.md"
+  },
+  {
+    "id": "146",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Where can I check subscription details and expiration date?",
+      "zh-cn": "如何知道目前的订阅方案与效期？",
+      "zh-tw": "如何知道目前的訂閱方案與效期？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 49,
+    "file": "未分類/Zendesk 匯入/146-如何知道目前的訂閱方案與效期.md"
+  },
+  {
+    "id": "147",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I access the previous exclusive reports after subscribing?",
+      "zh-cn": "刚加入订阅，能看到以前的獨家報告嗎？",
+      "zh-tw": "剛加入訂閱，能看到以前的獨家報告嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 50,
+    "file": "未分類/Zendesk 匯入/147-剛加入訂閱-能看到以前的獨家報告嗎.md"
+  },
+  {
+    "id": "148",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How do I upgrade my subscription plan?",
+      "zh-cn": "如何升级訂閱方案？",
+      "zh-tw": "如何升級訂閱方案？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 51,
+    "file": "未分類/Zendesk 匯入/148-如何升級訂閱方案.md"
+  },
+  {
+    "id": "149",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Will upgrading my plan affect my current subscription period?",
+      "zh-cn": "升级订阅方案后，会影响正在进行的订阅效期吗？",
+      "zh-tw": "升級訂閱方案後，會影響正在進行的訂閱效期嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 52,
+    "file": "未分類/Zendesk 匯入/149-升級訂閱方案後-會影響正在進行的訂閱效期嗎.md"
+  },
+  {
+    "id": "150",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "As a paid member, is there a limit on the number of devices I can use to log into my account?",
+      "zh-cn": "订阅会员会有装置或 IP 限制吗？",
+      "zh-tw": "訂閱會員會有裝置或 IP 限制嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 53,
+    "file": "未分類/Zendesk 匯入/150-訂閱會員會有裝置或-IP-限制嗎.md"
+  },
+  {
+    "id": "151",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What if I accidentally created another account and also made a subscription there?",
+      "zh-cn": "用了两个帐号重複订阅怎麽办？",
+      "zh-tw": "用了兩個帳號重複訂閱怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 54,
+    "file": "未分類/Zendesk 匯入/151-用了兩個帳號重複訂閱怎麼辦.md"
+  },
+  {
+    "id": "152",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I download data after subscribing?",
+      "zh-cn": "订阅后就能下载数据吗？",
+      "zh-tw": "訂閱後就能下載數據嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 55,
+    "file": "未分類/Zendesk 匯入/152-訂閱後就能下載數據嗎.md"
+  },
+  {
+    "id": "153",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How do I switch from monthly to annual billing?",
+      "zh-cn": "如何将月缴方案转为年缴方案？",
+      "zh-tw": "如何將月繳方案轉為年繳方案？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 56,
+    "file": "未分類/Zendesk 匯入/153-如何將月繳方案轉為年繳方案.md"
+  },
+  {
+    "id": "154",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Where can I cancel my subscription to the free trial?",
+      "zh-cn": "试用时如何取消订阅？",
+      "zh-tw": "試用時如何取消訂閱？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 57,
+    "file": "未分類/Zendesk 匯入/154-試用時如何取消訂閱.md"
+  },
+  {
+    "id": "155",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I get a refund if I am charged after my free trial ends?",
+      "zh-cn": "试用订阅结束后忘记取消被自动扣款，是否能退款？",
+      "zh-tw": "試用訂閱結束後忘記取消被自動扣款，是否能退款？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 58,
+    "file": "未分類/Zendesk 匯入/155-試用訂閱結束後忘記取消被自動扣款-是否能退款.md"
+  },
+  {
+    "id": "156",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "After subscribing and making a payment, the related membership plan benefits are not activated",
+      "zh-cn": "订阅付款后，相关会员方案权益没有开通",
+      "zh-tw": "訂閱付款後，相關會員方案權益沒有開通"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 59,
+    "file": "未分類/Zendesk 匯入/156-訂閱付款後-相關會員方案權益沒有開通.md"
+  },
+  {
+    "id": "157",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "I'm using the free trial. Why did I receive a payment confirmation email?",
+      "zh-cn": "免费体验方案与自动订阅说明",
+      "zh-tw": "免費體驗方案與自動訂閱說明"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 60,
+    "file": "未分類/Zendesk 匯入/157-免費體驗方案與自動訂閱說明.md"
+  },
+  {
+    "id": "158",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I cancel my subscription?",
+      "zh-cn": "如何取消订阅？",
+      "zh-tw": "如何取消訂閱？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 61,
+    "file": "未分類/Zendesk 匯入/158-如何取消訂閱.md"
+  },
+  {
+    "id": "159",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I cancel my auto-renewal?",
+      "zh-cn": "如何取消自动续订？",
+      "zh-tw": "如何取消自動續訂？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 62,
+    "file": "未分類/Zendesk 匯入/159-如何取消自動續訂.md"
+  },
+  {
+    "id": "160",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What payment methods are currently available?",
+      "zh-cn": "目前提供哪些付款方式？",
+      "zh-tw": "目前提供哪些付款方式？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 63,
+    "file": "未分類/Zendesk 匯入/160-目前提供哪些付款方式.md"
+  },
+  {
+    "id": "161",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I cancel my ongoing subscription and get a partial refund?",
+      "zh-cn": "订阅效期还没结束，想提前中断可以吗？",
+      "zh-tw": "訂閱效期還沒結束，想提前中斷可以嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 64,
+    "file": "未分類/Zendesk 匯入/161-訂閱效期還沒結束-想提前中斷可以嗎.md"
+  },
+  {
+    "id": "162",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Will I be notified before my subscription renews?",
+      "zh-cn": "续约前的扣款会有通知吗？",
+      "zh-tw": "續約前的扣款會有通知嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 65,
+    "file": "未分類/Zendesk 匯入/162-續約前的扣款會有通知嗎.md"
+  },
+  {
+    "id": "163",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What if my credit card on file expires or is lost, how to replace credit card?",
+      "zh-cn": "订阅付款的信用卡到期或挂失，如何更换扣款信用卡？",
+      "zh-tw": "訂閱付款的信用卡到期或掛失，如何更換扣款信用卡？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 66,
+    "file": "未分類/Zendesk 匯入/163-訂閱付款的信用卡到期或掛失-如何更換扣款信用卡.md"
+  },
+  {
+    "id": "164",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What if I made a payment with my credit card / PayPal, but can't find the payment record in Payment History?",
+      "zh-cn": "订阅时信用卡或 Paypal 有付款成功，但没看到付款纪录怎么办？",
+      "zh-tw": "訂閱時信用卡或 Paypal 有付款成功，但沒看到付款紀錄怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 67,
+    "file": "未分類/Zendesk 匯入/164-訂閱時信用卡或-Paypal-有付款成功-但沒看到付款紀錄怎麼辦.md"
+  },
+  {
+    "id": "165",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "For credit card payment, what if I didn't receive the 3DS one-time password (OTP) via SMS?",
+      "zh-cn": "使用信用卡付款订阅，没收到 3D OTP 验证简讯怎麽办？",
+      "zh-tw": "使用信用卡付款訂閱，沒收到 3D OTP 驗證簡訊怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 68,
+    "file": "未分類/Zendesk 匯入/165-使用信用卡付款訂閱-沒收到-3D-OTP-驗證簡訊怎麼辦.md"
+  },
+  {
+    "id": "166",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What to Do If Payment Fails When Subscribing with Credit Card or Paypal?",
+      "zh-cn": "使用信用卡或 Paypal 付款订阅，但付款失败怎么办？",
+      "zh-tw": "使用信用卡或 Paypal 付款訂閱，但付款失敗怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 69,
+    "file": "未分類/Zendesk 匯入/166-使用信用卡或-Paypal-付款訂閱-但付款失敗怎麼辦.md"
+  },
+  {
+    "id": "167",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Is it safe to use my credit card to subscribe to your services?",
+      "zh-cn": "約定信用卡安全嗎？",
+      "zh-tw": "約定信用卡安全嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 70,
+    "file": "未分類/Zendesk 匯入/167-約定信用卡安全嗎.md"
+  },
+  {
+    "id": "168",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Where can I find my payment history?",
+      "zh-cn": "如何找到付费纪录？",
+      "zh-tw": "如何找到付費紀錄？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 71,
+    "file": "未分類/Zendesk 匯入/168-如何找到付費紀錄.md"
+  },
+  {
+    "id": "169",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "",
+      "zh-tw": "發票要補打統編要怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": false,
+      "zh-tw": true
+    },
+    "order": 72,
+    "file": "未分類/Zendesk 匯入/169-發票要補打統編要怎麼辦.md"
+  },
+  {
+    "id": "170",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I redeem M-Coins to extend my subscription while already subscribed?",
+      "zh-cn": "订阅中的会员，还能用M币兑换订阅效期吗？",
+      "zh-tw": "訂閱中的會員，還能用M幣兌換訂閱效期嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 73,
+    "file": "未分類/Zendesk 匯入/170-訂閱中的會員-還能用M幣兌換訂閱效期嗎.md"
+  },
+  {
+    "id": "171",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What do team plans entail?",
+      "zh-cn": "团队方案是什麽？",
+      "zh-tw": "團隊方案是什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 74,
+    "file": "未分類/Zendesk 匯入/171-團隊方案是什麼.md"
+  },
+  {
+    "id": "172",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "",
+      "zh-tw": "付款後何時會收到發票？發票形式為何？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": false,
+      "zh-tw": true
+    },
+    "order": 75,
+    "file": "未分類/Zendesk 匯入/172-付款後何時會收到發票-發票形式為何.md"
+  },
+  {
+    "id": "173",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "",
+      "zh-tw": "如何更改統編？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": false,
+      "zh-tw": true
+    },
+    "order": 76,
+    "file": "未分類/Zendesk 匯入/173-如何更改統編.md"
+  },
+  {
+    "id": "174",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What are M-coins?",
+      "zh-cn": "M币是什麽？",
+      "zh-tw": "M幣是什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 77,
+    "file": "未分類/Zendesk 匯入/174-M幣是什麼.md"
+  },
+  {
+    "id": "175",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I request a refund for M-Coins?",
+      "zh-cn": "M币可以申请退款吗？",
+      "zh-tw": "M幣可以申請退款嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 78,
+    "file": "未分類/Zendesk 匯入/175-M幣可以申請退款嗎.md"
+  },
+  {
+    "id": "176",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What do I get when I refer a friend to subscribe to MacroMicro?",
+      "zh-cn": "邀请朋友订阅能得到什么？",
+      "zh-tw": "邀請朋友訂閱能得到什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 79,
+    "file": "未分類/Zendesk 匯入/176-邀請朋友訂閱能得到什麼.md"
+  },
+  {
+    "id": "177",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What do the gray shaded areas on charts represent?",
+      "zh-cn": "网站图表上的灰底代表什麽？",
+      "zh-tw": "網站圖表上的灰底代表什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 80,
+    "file": "未分類/Zendesk 匯入/177-網站圖表上的灰底代表什麼.md"
+  },
+  {
+    "id": "178",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What do SA, NSA, SAAR, YoY, MoM, QoQ, and CA mean on charts?",
+      "zh-cn": "图表上的 SA、NSA、SAAR、YoY、MoM、QoQ、CA 代表什麽？",
+      "zh-tw": "圖表上的 SA、NSA、SAAR、YoY、MoM、QoQ、CA 代表什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 81,
+    "file": "未分類/Zendesk 匯入/178-圖表上的-SA-NSA-SAAR-YoY-MoM-QoQ-CA-代表什麼.md"
+  },
+  {
+    "id": "179",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What is the business cycle (economic cycle)?",
+      "zh-cn": "景气循环是什麽？",
+      "zh-tw": "景氣循環是什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 82,
+    "file": "未分類/Zendesk 匯入/179-景氣循環是什麼.md"
+  },
+  {
+    "id": "180",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I download the charts on MacroMicro?",
+      "zh-cn": "如何汇出图表图片？",
+      "zh-tw": "如何匯出圖表圖片？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 83,
+    "file": "未分類/Zendesk 匯入/180-如何匯出圖表圖片.md"
+  },
+  {
+    "id": "181",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What do L and R mean on charts?",
+      "zh-cn": "图表上的 L、R 代表什麽？",
+      "zh-tw": "圖表上的 L、R 代表什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 84,
+    "file": "未分類/Zendesk 匯入/181-圖表上的-L-R-代表什麼.md"
+  },
+  {
+    "id": "182",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Can I download data from MacroMicro?",
+      "zh-cn": "数据可以下载吗？",
+      "zh-tw": "數據可以下載嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 85,
+    "file": "未分類/Zendesk 匯入/182-數據可以下載嗎.md"
+  },
+  {
+    "id": "183",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What is the MM Fundamental Index and how is it constructed?",
+      "zh-cn": "MM基本面指数是什么？编制方法？",
+      "zh-tw": "MM基本面指數是什麼？編制方法？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 86,
+    "file": "未分類/Zendesk 匯入/183-MM基本面指數是什麼-編制方法.md"
+  },
+  {
+    "id": "184",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What if I can't find the data I'm looking for?",
+      "zh-cn": "有想要看的数据，但网站上找不到怎麽办？",
+      "zh-tw": "有想要看的數據，但網站上找不到怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 87,
+    "file": "未分類/Zendesk 匯入/184-有想要看的數據-但網站上找不到怎麼辦.md"
+  },
+  {
+    "id": "185",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What kind of content can I find in the Analysis section?",
+      "zh-cn": "MM独家报告可以看到哪些内容？",
+      "zh-tw": "MM獨家報告可以看到哪些內容？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 88,
+    "file": "未分類/Zendesk 匯入/185-MM獨家報告可以看到哪些內容.md"
+  },
+  {
+    "id": "186",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "如何购买课程？",
+      "zh-tw": "如何購買課程？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 89,
+    "file": "未分類/Zendesk 匯入/186-如何購買課程.md"
+  },
+  {
+    "id": "187",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What is MM Daily?",
+      "zh-cn": "MM短评是什麽？",
+      "zh-tw": "MM短評是什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 90,
+    "file": "未分類/Zendesk 匯入/187-MM短評是什麼.md"
+  },
+  {
+    "id": "188",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "购买课程后是在哪裡上课？",
+      "zh-tw": "購買課程後是在哪裡上課？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 91,
+    "file": "未分類/Zendesk 匯入/188-購買課程後是在哪裡上課.md"
+  },
+  {
+    "id": "189",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "课程是否有时效性？",
+      "zh-tw": "課程是否有時效性？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 92,
+    "file": "未分類/Zendesk 匯入/189-課程是否有時效性.md"
+  },
+  {
+    "id": "190",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "购买课程后可以退款吗？",
+      "zh-tw": "購買課程後可以退款嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 93,
+    "file": "未分類/Zendesk 匯入/190-購買課程後可以退款嗎.md"
+  },
+  {
+    "id": "191",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "如何使用课程兑换码与专属折扣码？",
+      "zh-tw": "如何使用課程兌換碼與專屬折扣碼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 94,
+    "file": "未分類/Zendesk 匯入/191-如何使用課程兌換碼與專屬折扣碼.md"
+  },
+  {
+    "id": "192",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "付费订阅后能免费看所有课程吗？",
+      "zh-tw": "付費訂閱後能免費看所有課程嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 95,
+    "file": "未分類/Zendesk 匯入/192-付費訂閱後能免費看所有課程嗎.md"
+  },
+  {
+    "id": "193",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "课程无法播放怎么办？",
+      "zh-tw": "課程無法播放怎麼辦？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 96,
+    "file": "未分類/Zendesk 匯入/193-課程無法播放怎麼辦.md"
+  },
+  {
+    "id": "194",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "如何找到过去买过的课程？",
+      "zh-tw": "如何找到過去買過的課程？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 97,
+    "file": "未分類/Zendesk 匯入/194-如何找到過去買過的課程.md"
+  },
+  {
+    "id": "195",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "购买课程后，无法观看的原因？",
+      "zh-tw": "購買課程後，無法觀看的原因？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 98,
+    "file": "未分類/Zendesk 匯入/195-購買課程後-無法觀看的原因.md"
+  },
+  {
+    "id": "196",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What is the MM Global Economic Calendar and how do I get it?",
+      "zh-cn": "MM全球财经日历是什么？如何获得？",
+      "zh-tw": "MM全球財經日曆是什麼？如何獲得？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 99,
+    "file": "未分類/Zendesk 匯入/196-MM全球財經日曆是什麼-如何獲得.md"
+  },
+  {
+    "id": "197",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What if I have trouble adding the calendar to my Google/Apple Calendar?",
+      "zh-cn": "怎么串接《MM全球财经日历》到 Google Calendar 或 Apple Calendar ？",
+      "zh-tw": "怎麼串接《MM全球財經日曆》到 Google Calendar 或 Apple Calendar ？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 100,
+    "file": "未分類/Zendesk 匯入/197-怎麼串接-MM全球財經日曆-到-Google-Calendar-或-Apple-.md"
+  },
+  {
+    "id": "198",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How often is the Podcast updated?",
+      "zh-cn": "播客更新频率？",
+      "zh-tw": "Podcast 更新頻率？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 101,
+    "file": "未分類/Zendesk 匯入/198-Podcast-更新頻率.md"
+  },
+  {
+    "id": "199",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Do you offer API services?",
+      "zh-cn": "有提供 API 服务吗？",
+      "zh-tw": "有提供 API 服務嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 102,
+    "file": "未分類/Zendesk 匯入/199-有提供-API-服務嗎.md"
+  },
+  {
+    "id": "200",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Does MacroMicro have a Podcast or YouTube channel?",
+      "zh-cn": "",
+      "zh-tw": "財經Ｍ平方有 Podcast 或 YouTube 嗎? 還有哪些社群"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": false,
+      "zh-tw": true
+    },
+    "order": 103,
+    "file": "未分類/Zendesk 匯入/200-財經Ｍ平方有-Podcast-或-YouTube-嗎-還有哪些社群.md"
+  },
+  {
+    "id": "201",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "Is there a MacroMicro app I can download?",
+      "zh-cn": "有提供 App 下载吗？",
+      "zh-tw": "有提供 App 下載嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 104,
+    "file": "未分類/Zendesk 匯入/201-有提供-App-下載嗎.md"
+  },
+  {
+    "id": "202",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "What is the MM User Sentiment Indicator?",
+      "zh-cn": "MM用户信心指标是什麽？",
+      "zh-tw": "MM用戶信心指標是什麼？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 105,
+    "file": "未分類/Zendesk 匯入/202-MM用戶信心指標是什麼.md"
+  },
+  {
+    "id": "203",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I unlock report content in the Blog?",
+      "zh-cn": "如何解锁付费报告内容？",
+      "zh-tw": "付費報告內容如何解鎖？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 106,
+    "file": "未分類/Zendesk 匯入/203-付費報告內容如何解鎖.md"
+  },
+  {
+    "id": "204",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "I’m a beginner—how should I start learning macroeconomics?",
+      "zh-cn": "我是初学者，该如何开始学习宏观经济？",
+      "zh-tw": "我是初學者，該如何開始學習總經？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 107,
+    "file": "未分類/Zendesk 匯入/204-我是初學者-該如何開始學習總經.md"
+  },
+  {
+    "id": "205",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "How can I contact customer support for assistance with my issue?",
+      "zh-cn": "如何寻求客服团队协助我的问题",
+      "zh-tw": "如何尋求客服團隊協助我的問題"
+    },
+    "status": "draft",
+    "locales": {
+      "en": true,
+      "zh-cn": true,
+      "zh-tw": true
+    },
+    "order": 108,
+    "file": "未分類/Zendesk 匯入/205-如何尋求客服團隊協助我的問題.md"
+  },
+  {
+    "id": "206",
+    "category": "未分類",
+    "section": "Zendesk 匯入",
+    "title": {
+      "en": "",
+      "zh-cn": "",
+      "zh-tw": "訂閱或購買課程會開發票嗎？可以開立公司統編嗎？"
+    },
+    "status": "draft",
+    "locales": {
+      "en": false,
+      "zh-cn": false,
+      "zh-tw": true
+    },
+    "order": 109,
+    "file": "未分類/Zendesk 匯入/206-訂閱或購買課程會開發票嗎-可以開立公司統編嗎.md"
   }
 ]
