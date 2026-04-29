@@ -17,14 +17,59 @@ zendesk_id: '15554535025423'
 
 成為 MM 訂閱會員後，可以享有豐富的數據與研究資源！以下是各方案的核心權益說明，歡迎前往 [訂閱方案介紹](https://www.macromicro.me/subscribe) 看更多！
 
-\n|  |  |  |
+|  |  |  |
 | --- | --- | --- |
-|\n **MM PRO** |\n **MM Prime** |\n **MM Max** **最受歡迎** |\n
-\n|\n \n基礎數據分析解鎖\n  ---  \n  \n- 總經圖表、獨家指標無限瀏覽 \n- 每月 6 ~ 8 篇獨家分析報告 \n- 個人專屬投資儀表板 \n- 全球財經行事曆 \n- 財經行事曆同步 Apple/Google Calendar \n \n |\n \n進階投資決策工具\n  ---  \n  \n- 總經圖表、獨家指標無限瀏覽 \n- 每月 6 ~ 8 篇獨家分析報告 \n- 個人專屬投資儀表板 \n- 獨家運算 / 製圖 / 回測工具 \n- 千檔 ETF 策略篩選、分析比較 \n- 全球財經行事曆 \n- 財經行事曆同步 Apple/Google Calendar \n \n |\n \n終極版的訂閱服務\n  ---  \n  \n- 總經圖表、獨家指標無限瀏覽 \n- 每月 6 ~ 8 篇獨家分析報告 \n- 個人專屬投資儀表板 \n- 獨家運算 / 製圖 / 回測工具 \n- 千檔 ETF 策略篩選、分析比較 \n- 產業決策平台 \n- 美股財報資料庫、競爭模組 \n- 美股公司財報會議 AI 摘要 \n- 全球財經行事曆 \n- 財經行事曆同步 Apple/Google Calendar \n \n |\n
-\n|\n [開始訂閱](https://www.macromicro.me/subscribe/checkout?pro=1) |\n [開始訂閱](https://www.macromicro.me/subscribe/checkout?prime=1) |\n [**開始訂閱**](https://www.macromicro.me/subscribe/checkout?max=1) |\n
-\n
+|
+ **MM PRO** |
+ **MM Prime** |
+ **MM Max** **最受歡迎** |
 
-\n
+|
+ 
+基礎數據分析解鎖
+  ---  
+  
+- 總經圖表、獨家指標無限瀏覽 
+- 每月 6 ~ 8 篇獨家分析報告 
+- 個人專屬投資儀表板 
+- 全球財經行事曆 
+- 財經行事曆同步 Apple/Google Calendar 
+ 
+ |
+ 
+進階投資決策工具
+  ---  
+  
+- 總經圖表、獨家指標無限瀏覽 
+- 每月 6 ~ 8 篇獨家分析報告 
+- 個人專屬投資儀表板 
+- 獨家運算 / 製圖 / 回測工具 
+- 千檔 ETF 策略篩選、分析比較 
+- 全球財經行事曆 
+- 財經行事曆同步 Apple/Google Calendar 
+ 
+ |
+ 
+終極版的訂閱服務
+  ---  
+  
+- 總經圖表、獨家指標無限瀏覽 
+- 每月 6 ~ 8 篇獨家分析報告 
+- 個人專屬投資儀表板 
+- 獨家運算 / 製圖 / 回測工具 
+- 千檔 ETF 策略篩選、分析比較 
+- 產業決策平台 
+- 美股財報資料庫、競爭模組 
+- 美股公司財報會議 AI 摘要 
+- 全球財經行事曆 
+- 財經行事曆同步 Apple/Google Calendar 
+ 
+ |
+
+|
+ [開始訂閱](https://www.macromicro.me/subscribe/checkout?pro=1) |
+ [開始訂閱](https://www.macromicro.me/subscribe/checkout?prime=1) |
+ [**開始訂閱**](https://www.macromicro.me/subscribe/checkout?max=1) |
 
 **個人方案**
 
@@ -34,14 +79,59 @@ zendesk_id: '15554535025423'
 
 财经Ｍ平方针对为不同需求规划订阅服务，成为 MM 订阅会员后，可以享有丰富的数据与研究资源！以下是各方案的核心权益说明，欢迎前往 [订阅方案介绍](https://sc.macromicro.me/subscribe) 看更多！
 
-\n|  |  |  |
+|  |  |  |
 | --- | --- | --- |
-|\n **MM PRO** |\n **MM Prime** |\n **MM Max** **最受欢迎** |\n
-\n|\n \n 基础数据分析解锁\n  ---  \n  \n- 宏观图表、独家指标无限浏览 \n- 每月 6 ~ 8 篇独家分析报告 \n- 个人专属投资仪表盘 \n- 全球财经行事历 \n- 财经行事历同步 Apple/Google Calendar \n \n |\n \n进阶投资决策工具\n  ---  \n  \n- 宏观图表、独家指标无限浏览 \n- 每月 6 ~ 8 篇独家分析报告 \n- 个人专属投资仪表盘 \n- 独家运算 / 製图 / 回测工具 \n- 千檔 ETF 策略筛选、分析比较 \n- 全球财经行事历 \n- 财经行事历同步 Apple/Google Calendar \n \n |\n \n终极版的订阅服务\n  ---  \n  \n- 宏观图表、独家指标无限浏览 \n- 每月 6 ~ 8 篇独家分析报告 \n- 个人专属投资仪表盘 \n- 独家运算 / 製图 / 回测工具 \n- 千檔 ETF 策略筛选、分析比较 \n- 产业决策平台 \n- 美股财报资料库、竞争模组 \n- 美股公司财报会议 AI 摘要 \n- 全球财经行事历 \n- 财经行事历同步 Apple/Google Calendar \n \n |\n
-\n|\n [开始订阅](https://sc.macromicro.me/subscribe/checkout?pro=1) |\n [开始订阅](https://sc.macromicro.me/subscribe/checkout?prime=1) |\n [**立即訂閱**](https://sc.macromicro.me/subscribe/checkout?max=1) |\n
-\n
+|
+ **MM PRO** |
+ **MM Prime** |
+ **MM Max** **最受欢迎** |
 
-\n
+|
+ 
+ 基础数据分析解锁
+  ---  
+  
+- 宏观图表、独家指标无限浏览 
+- 每月 6 ~ 8 篇独家分析报告 
+- 个人专属投资仪表盘 
+- 全球财经行事历 
+- 财经行事历同步 Apple/Google Calendar 
+ 
+ |
+ 
+进阶投资决策工具
+  ---  
+  
+- 宏观图表、独家指标无限浏览 
+- 每月 6 ~ 8 篇独家分析报告 
+- 个人专属投资仪表盘 
+- 独家运算 / 製图 / 回测工具 
+- 千檔 ETF 策略筛选、分析比较 
+- 全球财经行事历 
+- 财经行事历同步 Apple/Google Calendar 
+ 
+ |
+ 
+终极版的订阅服务
+  ---  
+  
+- 宏观图表、独家指标无限浏览 
+- 每月 6 ~ 8 篇独家分析报告 
+- 个人专属投资仪表盘 
+- 独家运算 / 製图 / 回测工具 
+- 千檔 ETF 策略筛选、分析比较 
+- 产业决策平台 
+- 美股财报资料库、竞争模组 
+- 美股公司财报会议 AI 摘要 
+- 全球财经行事历 
+- 财经行事历同步 Apple/Google Calendar 
+ 
+ |
+
+|
+ [开始订阅](https://sc.macromicro.me/subscribe/checkout?pro=1) |
+ [开始订阅](https://sc.macromicro.me/subscribe/checkout?prime=1) |
+ [**立即訂閱**](https://sc.macromicro.me/subscribe/checkout?max=1) |
 
 **个人方案**
 
@@ -53,14 +143,52 @@ At MacroMicro, we provide subscription plans designed to meet a variety of needs
 
 Here's a breakdown of each plan's core benefits:
 
-\n|  |  |
+|  |  |
 | --- | --- |
-|\n **MM Prime** |\n **MM Max** **Popular!** |\n
-\n|\n \nProfessional Investment Tools\n  ---  \n  \n- Unlimited access to live macro charts \n- Exclusive reports & insights \n- Personalized Dashboards & Watchlists \n- Powerful Toolbox Features \n- Fundamentals across All Asset Classes \n- Global Economic Calendar \n- Sync Econ. events with Apple/Google Calendar \n- AI-Powered Indicators \n- No third-party ads \n \n |\n \nThe Premier Subscription\n  ---  \n  \n- Unlimited access to live macro charts \n- Exclusive reports & insights \n- Personalized Dashboards & Watchlists \n- Powerful Toolbox Features \n- Fundamentals across All Asset Classes \n- Industry Intelligence Hub \n- U.S. Earnings & Competitive Analysis Module \n- AI-Powered Earnings Call Summaries \n- Global Economic Calendar \n- Sync Econ. events with Apple/Google Calendar \n- AI-Powered Indicators \n- No third-party ads \n- 2026 MacroMicro Economic Outlook (TWD 7,200 Value) \n- US-Iran Conflict Dashboard \n \n |\n
-\n|\n [Subscribe](https://en.macromicro.me/subscribe/checkout?prime=1) |\n [Subscribe](https://en.macromicro.me/subscribe/checkout?max=1) |\n
-\n
+|
+ **MM Prime** |
+ **MM Max** **Popular!** |
 
-\n
+|
+ 
+Professional Investment Tools
+  ---  
+  
+- Unlimited access to live macro charts 
+- Exclusive reports & insights 
+- Personalized Dashboards & Watchlists 
+- Powerful Toolbox Features 
+- Fundamentals across All Asset Classes 
+- Global Economic Calendar 
+- Sync Econ. events with Apple/Google Calendar 
+- AI-Powered Indicators 
+- No third-party ads 
+ 
+ |
+ 
+The Premier Subscription
+  ---  
+  
+- Unlimited access to live macro charts 
+- Exclusive reports & insights 
+- Personalized Dashboards & Watchlists 
+- Powerful Toolbox Features 
+- Fundamentals across All Asset Classes 
+- Industry Intelligence Hub 
+- U.S. Earnings & Competitive Analysis Module 
+- AI-Powered Earnings Call Summaries 
+- Global Economic Calendar 
+- Sync Econ. events with Apple/Google Calendar 
+- AI-Powered Indicators 
+- No third-party ads 
+- 2026 MacroMicro Economic Outlook (TWD 7,200 Value) 
+- US-Iran Conflict Dashboard 
+ 
+ |
+
+|
+ [Subscribe](https://en.macromicro.me/subscribe/checkout?prime=1) |
+ [Subscribe](https://en.macromicro.me/subscribe/checkout?max=1) |
 
 **Individual Plans**
 
