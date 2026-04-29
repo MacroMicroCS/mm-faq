@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 28
 section: 訂閱方案介紹
-status: draft
+status: published
 title:
   en: Subscription Plans for Enterprise：MM Business、API Essential、 D&B GlobalView
   zh-cn: 企业方案介绍：MM Business、API Essential、  D&B GlobalView

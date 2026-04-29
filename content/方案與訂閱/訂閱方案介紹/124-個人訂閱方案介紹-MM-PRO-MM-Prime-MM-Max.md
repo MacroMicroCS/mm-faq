@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 27
 section: 訂閱方案介紹
-status: draft
+status: published
 title:
   en: Subscription Plans for Individuals：MM Prime、MM Max
   zh-cn: 订阅方案介绍 - MM PRO、MM Prime、MM Max

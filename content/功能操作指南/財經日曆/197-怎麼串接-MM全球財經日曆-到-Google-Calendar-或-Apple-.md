@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 100
 section: 財經日曆
-status: draft
+status: published
 title:
   en: What if I have trouble adding the calendar to my Google/Apple Calendar?
   zh-cn: 怎么串接《MM全球财经日历》到 Google Calendar 或 Apple Calendar ？

@@ -7,7 +7,7 @@ locales:
   zh-tw: false
 order: 16
 section: 付款方式
-status: draft
+status: published
 title:
   en: Why do the subscription plans show prices in USD, but the actual payment is
     charged in TWD?

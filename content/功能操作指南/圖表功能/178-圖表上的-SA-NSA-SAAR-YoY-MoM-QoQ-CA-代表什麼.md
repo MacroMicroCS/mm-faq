@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 81
 section: 圖表功能
-status: draft
+status: published
 title:
   en: What do SA, NSA, SAAR, YoY, MoM, QoQ, and CA mean on charts?
   zh-cn: 图表上的 SA、NSA、SAAR、YoY、MoM、QoQ、CA 代表什麽？

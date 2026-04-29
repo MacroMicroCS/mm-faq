@@ -7,7 +7,7 @@ locales:
   zh-tw: false
 order: 8
 section: 免費試用與入門
-status: draft
+status: published
 title:
   en: Can I access a free trial of MacroMicro services?
   zh-cn: ''

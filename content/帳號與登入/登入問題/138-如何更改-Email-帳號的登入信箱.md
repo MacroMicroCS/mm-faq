@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 41
 section: 登入問題
-status: draft
+status: published
 title:
   en: How can I change the email address for account login?
   zh-cn: 如何更改 Email 帐号的登入信箱？

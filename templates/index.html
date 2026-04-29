@@ -11,7 +11,7 @@
 </div>
 <div class="category-grid">
     {% for cat_name, count in category_list.items() %}
-    <a href="/category/{{ cat_name }}?locale={{ locale }}" class="category-tile">
+    <a href="/category/{{ cat_name | urlquote }}?locale={{ locale }}" class="category-tile">
         <div class="tile-icon">
             {% set icon = category_icons.get(cat_name, 'help-circle') %}
             {% if icon == 'rocket' %}

@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 103
 section: 學習資源
-status: draft
+status: published
 title:
   en: Does MacroMicro have a Podcast or YouTube channel?
   zh-cn: ''

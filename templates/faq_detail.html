@@ -5,7 +5,7 @@
     <div class="breadcrumb">
         <a href="/?locale={{ locale }}">{% if locale == 'en' %}Home{% elif locale == 'zh-cn' %}首页{% else %}首頁{% endif %}</a>
         <span>›</span>
-        <a href="/category/{{ item.category }}?locale={{ locale }}">{{ item.category }}</a>
+        <a href="/category/{{ item.category | urlquote }}?locale={{ locale }}">{{ item.category }}</a>
         <span>›</span>
         <span>{{ item.section }}</span>
     </div>

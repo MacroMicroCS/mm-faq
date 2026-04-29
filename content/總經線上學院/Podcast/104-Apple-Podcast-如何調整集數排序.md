@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 7
 section: Podcast
-status: draft
+status: published
 title:
   en: ''
   zh-cn: ''

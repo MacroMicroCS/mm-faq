@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 101
 section: Podcast
-status: draft
+status: published
 title:
   en: How often is the Podcast updated?
   zh-cn: 播客更新频率？

@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 67
 section: 付款方式
-status: draft
+status: published
 title:
   en: What if I made a payment with my credit card / PayPal, but can't find the payment
     record in Payment History?

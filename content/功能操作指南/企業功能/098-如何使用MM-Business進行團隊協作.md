@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 1
 section: 企業功能
-status: draft
+status: published
 title:
   en: How to use MM Business for team collaboration?
   zh-cn: 如何使用MM Business进行团队协作？

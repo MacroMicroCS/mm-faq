@@ -8,6 +8,7 @@ from typing import Optional
 
 import frontmatter
 import markdown
+from urllib.parse import quote as urlquote
 from fastapi import FastAPI, Request, Query, UploadFile, File
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -20,6 +21,7 @@ INDEX_PATH = BASE_DIR / "index.json"
 
 app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
+templates.env.filters['urlquote'] = lambda s: urlquote(str(s), safe='')
 
 LOCALE_NAMES = {"zh-tw": "繁體中文", "zh-cn": "简体中文", "en": "English"}
 

@@ -7,7 +7,7 @@ locales:
   zh-tw: true
 order: 69
 section: 付款方式
-status: draft
+status: published
 title:
   en: What to Do If Payment Fails When Subscribing with Credit Card or Paypal?
   zh-cn: 使用信用卡或 Paypal 付款订阅，但付款失败怎么办？
