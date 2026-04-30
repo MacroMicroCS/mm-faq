@@ -1,0 +1,10 @@
+services:
+  mm-faq:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./content:/app/content
+      - ./index.json:/app/index.json
+      - ./static/uploads:/app/static/uploads
+    restart: unless-stopped
