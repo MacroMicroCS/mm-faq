@@ -116,7 +116,7 @@
       "zh-cn": "",
       "zh-tw": "Apple Podcast 如何調整集數排序？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": false,
       "zh-cn": false,
@@ -134,7 +134,7 @@
       "zh-cn": "",
       "zh-tw": "Can I access a free trial of MacroMicro services?"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": false,
@@ -170,7 +170,7 @@
       "zh-cn": "如何汇出图表图片？",
       "zh-tw": "如何匯出數據圖片？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -242,7 +242,7 @@
       "zh-cn": "如何区分图表来源是来自官方还是用户？",
       "zh-tw": "如何區分圖表來源是來自官方還是用戶？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -296,7 +296,7 @@
       "zh-cn": "「最新值」和「浮水印」是什么功能？",
       "zh-tw": "「最新值」和「浮水印」是什麼功能？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -350,7 +350,7 @@
       "zh-cn": "如何注册成为财经Ｍ平方会员？",
       "zh-tw": "如何註冊成為財經Ｍ平方會員？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -512,7 +512,7 @@
       "zh-cn": "会员选单在哪里？如何进入",
       "zh-tw": "會員選單在哪裡？如何進入？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -566,7 +566,7 @@
       "zh-cn": "如何收藏图表、图组？收藏后去哪里找",
       "zh-tw": "如何收藏圖表、圖組？收藏後去哪裡找"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": false,
       "zh-cn": true,
@@ -584,7 +584,7 @@
       "zh-cn": "目前提供哪些方式註册？",
       "zh-tw": "目前提供哪些方式註冊？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -620,7 +620,7 @@
       "zh-cn": "一个帐号有哪些登入方式？",
       "zh-tw": "一個帳號可以有幾種登入方式？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -692,7 +692,7 @@
       "zh-cn": "如何更改密码？",
       "zh-tw": "如何更改密碼？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -746,7 +746,7 @@
       "zh-cn": "如何修改个人资料？",
       "zh-tw": "如何修改個人資料？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -818,7 +818,7 @@
       "zh-cn": "如何更改電子報收件信箱？",
       "zh-tw": "如何更改電子報收件信箱？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -836,7 +836,7 @@
       "zh-cn": "如何取消电子报信件？",
       "zh-tw": "如何取消電子報信件？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -1358,7 +1358,7 @@
       "zh-cn": "",
       "zh-tw": "如何更改統編？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": false,
       "zh-cn": false,
@@ -1430,7 +1430,7 @@
       "zh-cn": "网站图表上的灰底代表什麽？",
       "zh-tw": "網站圖表上的灰底代表什麼？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -1538,7 +1538,7 @@
       "zh-cn": "MM基本面指数是什么？编制方法？",
       "zh-tw": "MM基本面指數是什麼？編制方法？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -1610,7 +1610,7 @@
       "zh-cn": "MM短评是什麽？",
       "zh-tw": "MM短評是什麼？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -1934,7 +1934,7 @@
       "zh-cn": "如何寻求客服团队协助我的问题",
       "zh-tw": "如何尋求客服團隊協助我的問題"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": true,
       "zh-cn": true,
@@ -1952,7 +1952,7 @@
       "zh-cn": "",
       "zh-tw": "訂閱或購買課程會開發票嗎？可以開立公司統編嗎？"
     },
-    "status": "published",
+    "status": "draft",
     "locales": {
       "en": false,
       "zh-cn": false,
