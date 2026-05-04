@@ -146,7 +146,7 @@
   {
     "id": "106",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "取消與退款",
     "title": {
       "en": "",
       "zh-cn": "取消订阅后，会员期间收到的报告还能观看吗？",
@@ -159,7 +159,7 @@
       "zh-tw": true
     },
     "order": 9,
-    "file": "方案與訂閱/訂閱資訊/106-取消訂閱後-會員期間收到的報告還能觀看嗎.md"
+    "file": "方案與訂閱/取消與退款/106-取消訂閱後-會員期間收到的報告還能觀看嗎.md"
   },
   {
     "id": "107",
@@ -866,7 +866,7 @@
   {
     "id": "146",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "訂閱管理",
     "title": {
       "en": "Where can I check subscription details and expiration date?",
       "zh-cn": "如何知道目前的订阅方案与效期？",
@@ -879,7 +879,7 @@
       "zh-tw": true
     },
     "order": 49,
-    "file": "方案與訂閱/訂閱資訊/146-如何知道目前的訂閱方案與效期.md"
+    "file": "方案與訂閱/訂閱管理/146-如何知道目前的訂閱方案與效期.md"
   },
   {
     "id": "147",
@@ -902,7 +902,7 @@
   {
     "id": "148",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "訂閱管理",
     "title": {
       "en": "How do I upgrade my subscription plan?",
       "zh-cn": "如何升级訂閱方案？",
@@ -915,12 +915,12 @@
       "zh-tw": true
     },
     "order": 51,
-    "file": "方案與訂閱/訂閱資訊/148-如何升級訂閱方案.md"
+    "file": "方案與訂閱/訂閱管理/148-如何升級訂閱方案.md"
   },
   {
     "id": "149",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "訂閱管理",
     "title": {
       "en": "Will upgrading my plan affect my current subscription period?",
       "zh-cn": "升级订阅方案后，会影响正在进行的订阅效期吗？",
@@ -933,7 +933,7 @@
       "zh-tw": true
     },
     "order": 52,
-    "file": "方案與訂閱/訂閱資訊/149-升級訂閱方案後-會影響正在進行的訂閱效期嗎.md"
+    "file": "方案與訂閱/訂閱管理/149-升級訂閱方案後-會影響正在進行的訂閱效期嗎.md"
   },
   {
     "id": "150",
@@ -956,7 +956,7 @@
   {
     "id": "151",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "訂閱管理",
     "title": {
       "en": "What if I accidentally created another account and also made a subscription there?",
       "zh-cn": "用了两个帐号重複订阅怎麽办？",
@@ -969,7 +969,7 @@
       "zh-tw": true
     },
     "order": 54,
-    "file": "方案與訂閱/訂閱資訊/151-用了兩個帳號重複訂閱怎麼辦.md"
+    "file": "方案與訂閱/訂閱管理/151-用了兩個帳號重複訂閱怎麼辦.md"
   },
   {
     "id": "152",
@@ -992,7 +992,7 @@
   {
     "id": "153",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "訂閱管理",
     "title": {
       "en": "How do I switch from monthly to annual billing?",
       "zh-cn": "如何将月缴方案转为年缴方案？",
@@ -1005,12 +1005,12 @@
       "zh-tw": true
     },
     "order": 56,
-    "file": "方案與訂閱/訂閱資訊/153-如何將月繳方案轉為年繳方案.md"
+    "file": "方案與訂閱/訂閱管理/153-如何將月繳方案轉為年繳方案.md"
   },
   {
     "id": "154",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "取消與退款",
     "title": {
       "en": "Where can I cancel my subscription to the free trial?",
       "zh-cn": "试用时如何取消订阅？",
@@ -1023,12 +1023,12 @@
       "zh-tw": true
     },
     "order": 57,
-    "file": "方案與訂閱/訂閱資訊/154-試用時如何取消訂閱.md"
+    "file": "方案與訂閱/取消與退款/154-試用時如何取消訂閱.md"
   },
   {
     "id": "155",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "取消與退款",
     "title": {
       "en": "Can I get a refund if I am charged after my free trial ends?",
       "zh-cn": "试用订阅结束后忘记取消被自动扣款，是否能退款？",
@@ -1041,12 +1041,12 @@
       "zh-tw": true
     },
     "order": 58,
-    "file": "方案與訂閱/訂閱資訊/155-試用訂閱結束後忘記取消被自動扣款-是否能退款.md"
+    "file": "方案與訂閱/取消與退款/155-試用訂閱結束後忘記取消被自動扣款-是否能退款.md"
   },
   {
     "id": "156",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "訂閱管理",
     "title": {
       "en": "After subscribing and making a payment, the related membership plan benefits are not activated",
       "zh-cn": "订阅付款后，相关会员方案权益没有开通",
@@ -1059,7 +1059,7 @@
       "zh-tw": true
     },
     "order": 59,
-    "file": "方案與訂閱/訂閱資訊/156-訂閱付款後-相關會員方案權益沒有開通.md"
+    "file": "方案與訂閱/訂閱管理/156-訂閱付款後-相關會員方案權益沒有開通.md"
   },
   {
     "id": "157",
@@ -1082,7 +1082,7 @@
   {
     "id": "158",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "取消與退款",
     "title": {
       "en": "How can I cancel my subscription?",
       "zh-cn": "如何取消订阅？",
@@ -1095,12 +1095,12 @@
       "zh-tw": true
     },
     "order": 61,
-    "file": "方案與訂閱/訂閱資訊/158-如何取消訂閱.md"
+    "file": "方案與訂閱/取消與退款/158-如何取消訂閱.md"
   },
   {
     "id": "159",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "取消與退款",
     "title": {
       "en": "How can I cancel my auto-renewal?",
       "zh-cn": "如何取消自动续订？",
@@ -1113,7 +1113,7 @@
       "zh-tw": true
     },
     "order": 62,
-    "file": "方案與訂閱/訂閱資訊/159-如何取消自動續訂.md"
+    "file": "方案與訂閱/取消與退款/159-如何取消自動續訂.md"
   },
   {
     "id": "160",
@@ -1136,7 +1136,7 @@
   {
     "id": "161",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "取消與退款",
     "title": {
       "en": "Can I cancel my ongoing subscription and get a partial refund?",
       "zh-cn": "订阅效期还没结束，想提前中断可以吗？",
@@ -1149,7 +1149,7 @@
       "zh-tw": true
     },
     "order": 64,
-    "file": "方案與訂閱/訂閱資訊/161-訂閱效期還沒結束-想提前中斷可以嗎.md"
+    "file": "方案與訂閱/取消與退款/161-訂閱效期還沒結束-想提前中斷可以嗎.md"
   },
   {
     "id": "162",
@@ -1298,7 +1298,7 @@
   {
     "id": "170",
     "category": "方案與訂閱",
-    "section": "訂閱資訊",
+    "section": "訂閱管理",
     "title": {
       "en": "Can I redeem M-Coins to extend my subscription while already subscribed?",
       "zh-cn": "订阅中的会员，还能用M币兑换订阅效期吗？",
@@ -1311,7 +1311,7 @@
       "zh-tw": true
     },
     "order": 73,
-    "file": "方案與訂閱/訂閱資訊/170-訂閱中的會員-還能用M幣兌換訂閱效期嗎.md"
+    "file": "方案與訂閱/訂閱管理/170-訂閱中的會員-還能用M幣兌換訂閱效期嗎.md"
   },
   {
     "id": "171",

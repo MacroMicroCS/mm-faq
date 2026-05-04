@@ -184,26 +184,44 @@ async def faq_detail(request: Request, faq_id: str, locale: str = Query("zh-tw")
     })
 
 
+def fuzzy_score(query: str, text: str) -> float:
+    q = query.lower().strip().replace(' ', '')
+    t = text.lower().replace(' ', '')
+    if not q or not t:
+        return 0.0
+    if q in t:
+        return 1.0
+    if len(q) < 2:
+        return 1.0 if q in t else 0.0
+    q_bg = {q[i:i+2] for i in range(len(q)-1)}
+    t_bg = {t[i:i+2] for i in range(len(t)-1)}
+    return len(q_bg & t_bg) / len(q_bg) if q_bg else 0.0
+
+
 @app.get("/search", response_class=HTMLResponse)
 async def search(request: Request, q: str = "", locale: str = Query("zh-tw")):
     index = load_index()
     results = []
     if q:
-        q_lower = q.lower()
+        scored = []
         for item in index:
             if item["status"] != "published":
                 continue
             if not item["locales"].get(locale, False):
                 continue
-            title = item["title"].get(locale, item["title"]["zh-tw"])
-            if q_lower in title.lower():
-                results.append(item)
-                continue
-            post = load_faq(item["file"])
-            if post:
-                content = get_content_by_locale(post, locale)
-                if q_lower in content.lower():
-                    results.append(item)
+            title = item["title"].get(locale) or item["title"].get("zh-tw", "")
+            title_score = fuzzy_score(q, title)
+            content_score = 0.0
+            if title_score < 0.5:
+                post = load_faq(item["file"])
+                if post:
+                    content = get_content_by_locale(post, locale)
+                    content_score = fuzzy_score(q, content) * 0.6
+            score = max(title_score, content_score)
+            if score >= 0.3:
+                scored.append((score, item))
+        scored.sort(key=lambda x: x[0], reverse=True)
+        results = [item for _, item in scored]
     return templates.TemplateResponse(request, "search.html", context={
         "query": q,
         "results": results,
@@ -423,6 +441,25 @@ async def api_get_faq(faq_id: str, locale: str = "zh-tw"):
         "locales": item["locales"],
         "status": item["status"],
     }
+
+
+@app.post("/api/reorder")
+async def reorder_faqs(request: Request):
+    body = await request.json()
+    ids = body.get("ids", [])
+    index = load_index()
+    for new_order, faq_id in enumerate(ids, start=1):
+        item = next((i for i in index if i["id"] == faq_id), None)
+        if item:
+            item["order"] = new_order
+            full_path = CONTENT_DIR / item["file"]
+            if full_path.exists():
+                post = frontmatter.load(str(full_path))
+                post.metadata["order"] = new_order
+                with open(full_path, "w", encoding="utf-8") as f:
+                    f.write(frontmatter.dumps(post))
+    save_index(index)
+    return JSONResponse({"ok": True})
 
 
 if __name__ == "__main__":
